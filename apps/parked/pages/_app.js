@@ -1,0 +1,77 @@
+import "tailwindcss/tailwind.css";
+import clsx from "clsx";
+import { NextSeo } from "next-seo";
+import { DarkModeToggle } from "@tek/ui";
+import { trackGoal } from "fathom-client";
+import Head from "next/head";
+import { useHostName, useFathom, getDomains } from "@tek/utils";
+
+// configs
+import { theme } from "../tailwind.config";
+import SEO from "../next-seo.config";
+import config from "../config";
+
+// other
+import goals from "../lib/fathomGoals";
+
+const hostnames = process.env.NEXT_PUBLIC_FATHOM_SITE_DOMAINS;
+const { THEMES } = config;
+
+const ParkedApp = ({ Component, pageProps }) => {
+  useFathom({ includedDomains: getDomains({ hostnames }) });
+  const hostName = useHostName();
+
+  return (
+    <>
+      <NextSeo {...SEO({ hostName })} />
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/safari-pinned-tab.svg"
+          color={theme.extend.colors.primary["500"]}
+        />
+        <meta
+          name="msapplication-TileColor"
+          content={theme.extend.colors.primary["500"]}
+        />
+      </Head>
+      <div
+        className={clsx(
+          "flex flex-col justify-center min-h-screen p-8 border-8 bg-gray-100 transition-colors",
+          "dark:bg-gray-900",
+          "border-primary-500"
+        )}
+      >
+        <DarkModeToggle
+          className="absolute top-0 right-0 p-5"
+          themes={THEMES}
+          onSetDarkMode={() => trackGoal(goals.setDarkMode)}
+          onSetLightMode={() => trackGoal(goals.setLightMode)}
+          moonColor={theme.extend.colors.primary["500"]}
+          sunColor={theme.extend.colors.secondary}
+        />
+        <Component hostName={hostName} {...pageProps} />
+      </div>
+    </>
+  );
+};
+
+export default ParkedApp;

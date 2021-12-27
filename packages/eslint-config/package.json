@@ -1,0 +1,34 @@
+{
+  "name": "@tek/eslint-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
+  "bin": {
+    "eslint": "./node_modules/.bin/eslint"
+  },
+  "files": [
+    "eslint-preset-next.js",
+    "eslint-preset-react.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.5.0",
+    "eslint-config-next": "^12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.0.1",
+    "typescript": "^4.5.3"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.2.1"
+  }
+}
