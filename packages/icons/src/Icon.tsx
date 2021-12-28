@@ -1,11 +1,15 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 
-export type IconProps = { color?: string; children: ReactNode };
+export type IconProps = {
+  className?: string;
+  color?: string;
+  children?: ReactNode;
+};
 
-const Icon = ({ color, children }: IconProps) => (
+const Icon = ({ className, color, children }: IconProps) => (
   <svg
-    className={clsx("fill-current", color && color)}
+    className={clsx("fill-current", color && color, className)}
     version="1.1"
     x="0px"
     y="0px"
