@@ -6,6 +6,7 @@ module.exports = {
     "./config.js",
   ],
   darkMode: "class",
+  safelist: ["fill-current"],
   theme: {
     extend: {
       colors: {

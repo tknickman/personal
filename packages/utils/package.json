@@ -31,6 +31,6 @@
     "react": "^17.0.2"
   },
   "jest": {
-    "preset": "@tek/config/jest/node"
+    "preset": "@tek/config/jest/presets/node"
   }
 }
