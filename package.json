@@ -19,6 +19,7 @@
     "turbo": "latest"
   },
   "turbo": {
+    "baseBranch": "origin/main",
     "pipeline": {
       "build": {
         "dependsOn": [
@@ -34,7 +35,9 @@
         "outputs": [
           "coverage/**"
         ],
-        "dependsOn": []
+        "dependsOn": [
+          "^build"
+        ]
       },
       "lint": {
         "outputs": []

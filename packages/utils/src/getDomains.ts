@@ -4,8 +4,12 @@ Given a comma seperated string of hostnames in the format
 their www. prefixes. (used for fathom analytics hook)
 */
 
-const getDomains = ({ hostnames }: { hostnames: string }): Array<string> => {
-  return hostnames.split(",").flatMap((host) => [host, `www.${host}`]);
+const getDomains = ({ hostnames }: { hostnames?: string }): Array<string> => {
+  if (hostnames) {
+    return hostnames.split(",").flatMap((host) => [host, `www.${host}`]);
+  }
+
+  return [];
 };
 
 export default getDomains;
