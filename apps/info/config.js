@@ -1,11 +1,12 @@
-// Icons
-import Portfolio from "./components/icons/Portfolio";
-import Email from "./components/icons/Email";
-import GitHub from "./components/icons/Github";
-import Instagram from "./components/icons/Instagram";
-import LinkedIn from "./components/icons/LinkedIn";
-import StackOverflow from "./components/icons/StackOverflow";
-import Teknologist from "./components/icons/Teknologist";
+import {
+  Portfolio,
+  Email,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  StackOverflow,
+  Teknologist,
+} from "@tek/icons";
 
 const config = {
   THEMES: {
