@@ -11,4 +11,8 @@ describe("getDomains", () => {
       "www.tomk.info",
     ]);
   });
+
+  it("does not throw with an no arguments", () => {
+    expect(getDomains({})).toStrictEqual([]);
+  });
 });
