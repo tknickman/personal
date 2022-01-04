@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import { AppProps } from "next/app";
 import { NextSeo } from "next-seo";
 import { DarkModeToggle } from "@tek/ui";
 import { useFathom, getDomains } from "@tek/utils";
@@ -15,7 +16,7 @@ import config from "../config";
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_SITE_DOMAINS;
 const { THEMES } = config;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   useFathom({ includedDomains: getDomains({ hostnames }) });
 
   return (
@@ -61,8 +62,8 @@ function MyApp({ Component, pageProps }) {
         <DarkModeToggle
           className="absolute top-0 right-0 p-5"
           themes={THEMES}
-          onSetDarkMode={() => trackGoal(goals.setDarkMode)}
-          onSetLightMode={() => trackGoal(goals.setLightMode)}
+          onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+          onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
           moonColor={theme.extend.colors.primary}
           sunColor={theme.extend.colors.accent}
         />

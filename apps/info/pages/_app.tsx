@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import { AppProps } from "next/app";
 import { useState } from "react";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
@@ -10,15 +11,15 @@ import goals from "../lib/fathomGoals";
 
 import { theme } from "../tailwind.config";
 import SEO from "../next-seo.config";
-import config from "../config";
+import config, { LinkItem } from "../config";
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_SITE_DOMAINS;
 const { THEMES } = config;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   useFathom({ includedDomains: getDomains({ hostnames }) });
-  const [selectedItem, setSelectedItem] = useState(null);
-  const hoverColor = selectedItem?.borderColor;
+  const [selectedItem, setSelectedItem] = useState<LinkItem | null>(null);
+  const hoverColor = selectedItem ? selectedItem.borderColor : "border-primary";
 
   return (
     <>
@@ -57,14 +58,14 @@ function MyApp({ Component, pageProps }) {
         className={clsx(
           "flex flex-col justify-center min-h-screen p-8 border-8 bg-gray-100 transition-colors",
           "dark:bg-gray-900",
-          hoverColor || "border-primary"
+          hoverColor
         )}
       >
         <DarkModeToggle
           className="absolute top-0 right-0 p-5"
           themes={THEMES}
-          onSetDarkMode={() => trackGoal(goals.setDarkMode)}
-          onSetLightMode={() => trackGoal(goals.setLightMode)}
+          onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+          onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
           moonColor={theme.extend.colors.primary}
           sunColor={theme.extend.colors.primary}
         />

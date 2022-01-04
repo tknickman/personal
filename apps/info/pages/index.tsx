@@ -1,12 +1,20 @@
 import clsx from "clsx";
 import Header from "../components/Header";
-import config from "../config";
+import config, { LinkItem } from "../config";
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
 
 const { LINKS } = config;
 
-const Home = ({ hoverColor, selectedItem, setSelectedItem }) => (
+const Home = ({
+  hoverColor,
+  selectedItem,
+  setSelectedItem,
+}: {
+  hoverColor: string;
+  selectedItem: LinkItem | null;
+  setSelectedItem: (item: LinkItem | null) => void;
+}) => (
   <>
     <Header />
     <main className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -15,7 +23,9 @@ const Home = ({ hoverColor, selectedItem, setSelectedItem }) => (
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          onClick={() => trackGoal(goals[`${link.key}Click`], 0)}
+          onClick={() =>
+            trackGoal(goals[`${link.key}Click` as keyof typeof goals], 0)
+          }
           onMouseEnter={() => {
             setSelectedItem(link);
           }}
