@@ -1,0 +1,30 @@
+name: Deploy apps/share to S3
+on:
+  push:
+    branches: [main]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.SHARE_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.SHARE_AWS_SECRET_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn export
+
+      - name: Deploy
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: apps/share/out
+          bucket: public.tom.work
+          bucket-region: us-east-2
+          dist-id: E11S50KUJ9WS67
+          invalidation: /
+          delete-removed: true
+          no-cache: true
+          private: true
