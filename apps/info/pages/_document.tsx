@@ -1,20 +1,25 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import clsx from "clsx";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import config from "../config";
 
 const { THEMES } = config;
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
   render() {
     return (
-      <Html className={clsx(THEMES.DARK, "h-full")}>
+      <Html className={THEMES.DARK}>
         <Head />
-        <body className="h-full">
+        <body>
           <Main />
           <NextScript />
         </body>

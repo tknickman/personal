@@ -6,7 +6,7 @@ import { trackGoal } from "fathom-client";
 
 import goals from "../lib/fathomGoals";
 
-const ParkedLandingPage = ({ hostName }) => (
+const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
   <>
     <Header />
     <main className={clsx("grid")}>

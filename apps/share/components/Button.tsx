@@ -1,6 +1,11 @@
 import clsx from "clsx";
+import { HTMLProps } from "react";
 
-const ButtonLink = ({ className, children, ...props }) => (
+const ButtonLink = ({
+  className,
+  children,
+  ...props
+}: HTMLProps<HTMLAnchorElement>) => (
   <a
     target="_blank"
     type="button"
