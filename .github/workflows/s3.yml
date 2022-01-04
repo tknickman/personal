@@ -1,10 +1,10 @@
-name: Deploy apps/share to S3
+name: S3 Deploy
 on:
   push:
     branches: [main]
 jobs:
   run:
-    name: Deploy apps/share to S3
+    name: apps/share
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.SHARE_AWS_ACCESS_KEY_ID }}
