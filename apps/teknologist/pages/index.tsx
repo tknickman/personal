@@ -16,7 +16,7 @@ const EMAIL_DATA = {
 };
 
 const onContact = () => {
-  trackGoal(goals.contactClick);
+  trackGoal(goals.contactClick, 0);
   window.location.assign(
     `mailto:${EMAIL_DATA.account}+${MARKETING_PREFIX}@${EMAIL_DATA.domain}?subject=${EMAIL_DATA.subject}`
   );

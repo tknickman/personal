@@ -80,4 +80,6 @@ const config = {
   ],
 };
 
+export type LinkItem = typeof config.LINKS[0];
+
 export default config;
