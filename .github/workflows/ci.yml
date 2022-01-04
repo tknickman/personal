@@ -11,6 +11,7 @@ on:
 
 jobs:
   build:
+    name: CI (lint / test)
     runs-on: ubuntu-latest
 
     strategy:
