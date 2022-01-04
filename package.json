@@ -45,7 +45,8 @@
           "out/**"
         ],
         "dependsOn": [
-          "^build"
+          "^build",
+          "build"
         ]
       },
       "lint": {
