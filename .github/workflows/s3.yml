@@ -1,9 +1,10 @@
-name: Deploy apps/share to S3
+name: S3 Deploy
 on:
   push:
     branches: [main]
 jobs:
   run:
+    name: apps/share
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.SHARE_AWS_ACCESS_KEY_ID }}
@@ -25,6 +26,6 @@ jobs:
           bucket-region: us-east-2
           dist-id: E11S50KUJ9WS67
           invalidation: /
-          delete-removed: true
+          delete-removed: false
           no-cache: true
           private: true
