@@ -2,6 +2,9 @@ name: S3 Deploy
 on:
   push:
     branches: [main]
+    paths:
+      - "packages/**"
+      - "apps/share/**"
 jobs:
   run:
     name: apps/share
