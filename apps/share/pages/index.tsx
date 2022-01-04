@@ -32,7 +32,7 @@ export default function Home() {
             Public Asset Directory
           </p>
           <form>
-            <div className="relative w-1/4 mx-auto mt-4 rounded-md shadow-sm">
+            <div className="relative mx-auto mt-4 rounded-md shadow-sm md:w-1/2 lg:w-1/4">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <PhotographIcon
                   className={clsx("w-5 h-5 text-gray-400", {
