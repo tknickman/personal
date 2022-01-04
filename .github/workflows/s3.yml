@@ -26,6 +26,6 @@ jobs:
           bucket-region: us-east-2
           dist-id: E11S50KUJ9WS67
           invalidation: /
-          delete-removed: true
+          delete-removed: false
           no-cache: true
           private: true
