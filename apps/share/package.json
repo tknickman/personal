@@ -1,14 +1,15 @@
 {
-  "name": "teknologist",
+  "name": "share",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=3005",
+    "dev": "next dev --port=3004",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "test": "jest",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf ./out"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
@@ -17,15 +18,14 @@
     "clsx": "^1.1.1",
     "fathom-client": "^3.2.0",
     "next": "latest",
-    "next-seo": "^4.28.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "next-seo": "^4.27.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@tek/config": "*",
     "@tek/eslint-config": "*",
     "@tek/tsconfig": "*",
-    "@testing-library/react": "^12.1.2",
     "@types/react": "17.0.37",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",
