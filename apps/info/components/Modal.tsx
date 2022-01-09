@@ -63,7 +63,7 @@ const Modal = ({
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      My new portfolio is under development, and should be
+                      My new portfolio is under development and should be
                       completed by 02/2022
                     </p>
                   </div>
