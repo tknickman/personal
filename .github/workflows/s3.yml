@@ -25,9 +25,9 @@ jobs:
         uses: reggionick/s3-deploy@v3
         with:
           folder: apps/share/out
-          bucket: public.tom.work
+          bucket: www.tomk.link
           bucket-region: us-east-2
-          dist-id: E11S50KUJ9WS67
+          dist-id: E29ABWF8XC12PF
           invalidation: /
           delete-removed: false
           no-cache: true
