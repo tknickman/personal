@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Home from "../pages/index";
-import { createMockRouter } from "../test-utils/createMockRouter";
+import { createMockRouter } from "@tek/utils";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 
 describe("Home", () => {
