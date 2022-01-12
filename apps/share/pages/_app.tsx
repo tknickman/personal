@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { DarkModeToggle } from "@tek/ui";
 import { trackGoal } from "fathom-client";
 import Head from "next/head";
-import { useHostName, useFathom, getDomains } from "@tek/utils";
+import { useFathom, getDomains } from "@tek/utils";
 
 // configs
 import { theme } from "../tailwind.config";
