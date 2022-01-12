@@ -6,7 +6,24 @@ import {
   LinkedIn,
   StackOverflow,
   Teknologist,
+  IconProps,
 } from "@tek/icons";
+
+type config = {
+  THEMES: {
+    DARK: string;
+    LIGHT: string;
+  };
+  LINKS: {
+    name: string;
+    key: string;
+    borderColor: string;
+    textColor: string;
+    username: string;
+    url: string;
+    Icon: (props: IconProps) => JSX.Element;
+  }[];
+};
 
 const config = {
   THEMES: {
