@@ -1,3 +1,6 @@
+import { IconProps } from "./Icon";
+
+export type { IconProps };
 export { default as Email } from "./Email";
 export { default as GitHub } from "./GitHub";
 export { default as Instagram } from "./Instagram";

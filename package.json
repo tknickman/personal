@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "prettier": "^2.5.1",
-    "turbo": "latest"
+    "turbo": "^1.0.25"
   },
   "turbo": {
     "baseBranch": "origin/main",
