@@ -5,6 +5,7 @@ on:
     paths:
       - "packages/**"
       - "apps/share/**"
+      - ".github/workflows/s3.yml"
 jobs:
   run:
     name: apps/share
