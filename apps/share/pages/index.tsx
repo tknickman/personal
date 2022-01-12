@@ -1,4 +1,5 @@
-import { useState, FormEvent, MouseEvent } from "react";
+import { useState, FormEvent, MouseEvent, useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import clsx from "clsx";
 import { ChevronRightIcon } from "@heroicons/react/solid";
@@ -8,9 +9,21 @@ import config from "../config";
 
 import goals from "../lib/fathomGoals";
 
-export default function Home() {
-  const [key, setKey] = useState("");
-  const [error, setError] = useState(false);
+const redirect = (key: string): void => {
+  window.location.href = `/${config.ASSET_FOLDER}/${key}`;
+};
+
+const Home = () => {
+  const router = useRouter();
+  const [key, setKey] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
+  const { asset } = router.query;
+
+  useEffect(() => {
+    if (asset) {
+      redirect(asset as string);
+    }
+  }, [asset]);
 
   const jumpToAsset = (
     e: FormEvent<HTMLFormElement> | MouseEvent<HTMLButtonElement>
@@ -21,7 +34,7 @@ export default function Home() {
     if (!key) {
       setError(true);
     } else {
-      window.location.href = `/${config.ASSET_FOLDER}/${key}`;
+      redirect(key);
     }
   };
 
@@ -80,4 +93,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
