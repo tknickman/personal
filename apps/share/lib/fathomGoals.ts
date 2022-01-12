@@ -1,9 +1,9 @@
 const GOALS = {
-  contactClick: "DYUFB7VV",
-  sourceClick: "PAGCCFTS",
+  contactClick: "SJULN9NK",
+  search: "USLMM1YL",
   // theme selector
-  setDarkMode: "VDQ3QP80",
-  setLightMode: "BPZ1WN7T",
+  setDarkMode: "1RBN2QWW",
+  setLightMode: "55IXRH0I",
 };
 
 export default GOALS;
