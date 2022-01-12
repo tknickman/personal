@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent, MouseEvent } from "react";
 import Head from "next/head";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhotographIcon } from "@heroicons/react/outline";
@@ -10,7 +10,12 @@ export default function Home() {
   const [key, setKey] = useState("");
   const [error, setError] = useState(false);
 
-  const jumpToAsset = () => {
+  const jumpToAsset = (
+    e: FormEvent<HTMLFormElement> | MouseEvent<HTMLButtonElement>
+  ) => {
+    // prevent the form from refreshing
+    e.preventDefault();
+
     if (!key) {
       setError(true);
     } else {
@@ -31,7 +36,7 @@ export default function Home() {
           <p className="mt-1 text-4xl font-extrabold text-primary-600 sm:text-5xl sm:tracking-tight lg:text-6xl">
             Public Asset Directory
           </p>
-          <form>
+          <form onSubmit={jumpToAsset}>
             <div className="relative mx-auto mt-4 rounded-md shadow-sm md:w-1/2 lg:w-1/4">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <PhotographIcon

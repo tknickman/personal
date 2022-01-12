@@ -13,6 +13,8 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.SHARE_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.SHARE_AWS_SECRET_ACCESS_KEY }}
+      NEXT_PUBLIC_FATHOM_TRACKING: ${{ secrets.SHARE_NEXT_PUBLIC_FATHOM_TRACKING }}
+      NEXT_PUBLIC_FATHOM_SITE_DOMAINS: ${{ secrets.SHARE_NEXT_PUBLIC_FATHOM_SITE_DOMAINS }}
     steps:
       - uses: actions/checkout@v2
 
