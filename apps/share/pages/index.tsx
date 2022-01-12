@@ -1,10 +1,12 @@
 import { useState, FormEvent, MouseEvent } from "react";
 import Head from "next/head";
+import clsx from "clsx";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhotographIcon } from "@heroicons/react/outline";
-import clsx from "clsx";
+import { trackGoal } from "fathom-client";
+import config from "../config";
 
-const ASSET_FOLDER = "embeds";
+import goals from "../lib/fathomGoals";
 
 export default function Home() {
   const [key, setKey] = useState("");
@@ -15,11 +17,11 @@ export default function Home() {
   ) => {
     // prevent the form from refreshing
     e.preventDefault();
-
+    trackGoal(goals.search, 0);
     if (!key) {
       setError(true);
     } else {
-      window.location.href = `/${ASSET_FOLDER}/${key}`;
+      window.location.href = `/${config.ASSET_FOLDER}/${key}`;
     }
   };
 
