@@ -30,7 +30,7 @@ jobs:
           folder: apps/share/out
           bucket: www.tomk.link
           bucket-region: us-east-2
-          dist-id: E29ABWF8XC12PF
+          dist-id: ${{ secrets.SHARE_AWS_CLOUDFRONT_ID }}
           invalidation: /
           delete-removed: false
           no-cache: true
