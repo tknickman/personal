@@ -1,3 +1,6 @@
 {
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  }
 }
