@@ -17,13 +17,11 @@ import goals from "../lib/fathomGoals";
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
-const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 const { THEMES } = config;
 
 const ParkedApp = ({ Component, pageProps }: AppProps) => {
   const hostName = useHostName();
   useFathom(fathomSiteId as string, {
-    url: `${fathomUrl}.${hostName}`,
     includedDomains: getDomains({ hostnames }),
   });
 
