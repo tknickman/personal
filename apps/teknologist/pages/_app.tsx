@@ -2,7 +2,7 @@ import "tailwindcss/tailwind.css";
 import { AppProps } from "next/app";
 import { NextSeo } from "next-seo";
 import { DarkModeToggle } from "@tek/ui";
-import { useFathom, getDomains } from "@tek/utils";
+import { useFathom, getDomains, useDebug } from "@tek/utils";
 import Head from "next/head";
 import clsx from "clsx";
 
@@ -19,6 +19,7 @@ const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 const { THEMES } = config;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useDebug([hostnames, fathomSiteId, fathomUrl]);
   useFathom(fathomSiteId as string, {
     url: fathomUrl,
     includedDomains: getDomains({ hostnames }),
