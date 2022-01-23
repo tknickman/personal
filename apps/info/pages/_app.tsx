@@ -16,6 +16,7 @@ import config, { LinkItem } from "../config";
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
+
 const { THEMES } = config;
 
 function MyApp({ Component, pageProps }: AppProps) {
