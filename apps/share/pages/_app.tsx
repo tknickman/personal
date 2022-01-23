@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import { DarkModeToggle } from "@tek/ui";
 import { trackGoal } from "fathom-client";
 import Head from "next/head";
-import { useFathom, getDomains, useHostName } from "@tek/utils";
+import { useFathom, getDomains } from "@tek/utils";
 
 // configs
 import { theme } from "../tailwind.config";
@@ -21,9 +21,8 @@ const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 const { THEMES } = config;
 
 const ShareApp = ({ Component, pageProps }: AppProps) => {
-  const hostName = useHostName();
   useFathom(fathomSiteId as string, {
-    url: `${fathomUrl}.${hostName}`,
+    url: fathomUrl,
     includedDomains: getDomains({ hostnames }),
   });
 

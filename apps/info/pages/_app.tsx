@@ -19,9 +19,8 @@ const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 const { THEMES } = config;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const hostName = useHostName();
   useFathom(fathomSiteId as string, {
-    url: `${fathomUrl}.${hostName}`,
+    url: fathomUrl,
     includedDomains: getDomains({ hostnames }),
   });
   const [selectedItem, setSelectedItem] = useState<LinkItem | null>(null);
