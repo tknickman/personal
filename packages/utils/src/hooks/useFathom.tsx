@@ -1,18 +1,12 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { load, trackPageview } from "fathom-client";
+import { load, trackPageview, LoadOptions } from "fathom-client";
 
-const useFathom = ({
-  includedDomains,
-}: {
-  includedDomains: Array<string>;
-}): void => {
+const useFathom = (siteId: string, options: LoadOptions): void => {
   const router = useRouter();
 
   useEffect(() => {
-    load(process.env.NEXT_PUBLIC_FATHOM_TRACKING as string, {
-      includedDomains,
-    });
+    load(siteId, options);
 
     function onRouteChangeComplete(): void {
       trackPageview();
