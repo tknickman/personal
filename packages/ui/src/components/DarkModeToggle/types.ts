@@ -8,8 +8,12 @@ export type DarkModeToggleProps = {
   moonColor: string;
   sunColor: string;
   themes: DarkModeConfig;
+  size?: number;
   onSetLightMode?: () => void;
   onSetDarkMode?: () => void;
 };
 
-export type UseDarkMode = Omit<DarkModeToggleProps, "moonColor" | "sunColor">;
+export type UseDarkMode = Omit<
+  DarkModeToggleProps,
+  "moonColor" | "sunColor" | "size"
+>;
