@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { getAllTags } from "../../../lib/api/tags";
 import { getPostsByTag } from "../../../lib/api/posts";
 import { Tag } from "../../../lib/types";
-import Link from "next/Link";
+import Link from "next/link";
 
 const TagLanding = ({ tags }: { tags: Array<Tag> }) => {
   return (
@@ -13,7 +13,7 @@ const TagLanding = ({ tags }: { tags: Array<Tag> }) => {
         className="grid grid-cols-1 gap-5 mt-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4"
       >
         {tags.map((tag) => (
-          <Link href={tag.href} key={tag.slug}>
+          <Link href={tag.href} key={tag.slug} passHref>
             <li className="flex col-span-1 rounded-md shadow-sm">
               <div
                 className={clsx(
