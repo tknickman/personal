@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* FILLED FONT */
+
+  /* regular */
+  @font-face {
+    font-family: "Visia Pro";
+    src: url(../fonts/VisiaPro/Regular.woff) format("woff");
+  }
+  /* bold */
+  @font-face {
+    font-family: "Visia Pro";
+    font-weight: bold;
+    src: url(../fonts/VisiaPro/Bold.woff) format("woff");
+  }
+  /* italic */
+  @font-face {
+    font-family: "Visia Pro";
+    font-style: italic;
+    src: url(../fonts/VisiaPro/Italic.woff) format("woff");
+  }
+  /* bold italic */
+  @font-face {
+    font-family: "Visia Pro";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/VisiaPro/BoldItalic.woff) format("woff");
+  }
+
+  /* OUTLINE FONT */
+
+  /* regular */
+  @font-face {
+    font-family: "Visia Pro Outline";
+    src: url(../fonts/VisiaPro/RegularOutline.woff) format("woff");
+  }
+  /* bold */
+  @font-face {
+    font-family: "Visia Pro Outline";
+    font-weight: bold;
+    src: url(../fonts/VisiaPro/BoldOutline.woff) format("woff");
+  }
+  /* italic */
+  @font-face {
+    font-family: "Visia Pro Outline";
+    font-style: italic;
+    src: url(../fonts/VisiaPro/ItalicOutline.woff) format("woff");
+  }
+  /* bold italic */
+  @font-face {
+    font-family: "Visia Pro Outline";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/VisiaPro/BoldItalicOutline.woff) format("woff");
+  }
+}

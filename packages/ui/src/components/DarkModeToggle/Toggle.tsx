@@ -3,12 +3,12 @@ import useDarkMode from "./useDarkMode";
 import { DarkModeToggleProps } from "./types";
 
 const DarkModeToggle = ({
-  className,
   themes,
   moonColor,
   sunColor,
   onSetLightMode,
   onSetDarkMode,
+  size = 40,
   ...other
 }: DarkModeToggleProps) => {
   const [colorTheme, toggleTheme] = useDarkMode({
@@ -18,16 +18,14 @@ const DarkModeToggle = ({
   });
 
   return (
-    <div className={className}>
-      <DarkModeSwitch
-        checked={colorTheme === themes.DARK}
-        onChange={toggleTheme}
-        size={40}
-        moonColor={moonColor}
-        sunColor={sunColor}
-        {...other}
-      />
-    </div>
+    <DarkModeSwitch
+      checked={colorTheme === themes.DARK}
+      onChange={toggleTheme}
+      size={size}
+      moonColor={moonColor}
+      sunColor={sunColor}
+      {...other}
+    />
   );
 };
 
