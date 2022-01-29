@@ -66,14 +66,15 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
           "border-primary-600"
         )}
       >
-        <DarkModeToggle
-          className="absolute top-0 right-0 p-5"
-          themes={THEMES}
-          onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-          onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-          moonColor={theme.extend.colors.primary["600"]}
-          sunColor={theme.extend.colors.secondary}
-        />
+        <div className="absolute top-0 right-0 p-5">
+          <DarkModeToggle
+            themes={THEMES}
+            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+            moonColor={theme.extend.colors.primary["600"]}
+            sunColor={theme.extend.colors.secondary}
+          />
+        </div>
         <Component {...pageProps} />
       </div>
     </>

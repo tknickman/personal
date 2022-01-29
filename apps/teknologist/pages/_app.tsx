@@ -65,14 +65,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           "dark:bg-gray-900"
         )}
       >
-        <DarkModeToggle
-          className="absolute top-0 right-0 p-5"
-          themes={THEMES}
-          onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-          onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-          moonColor={theme.extend.colors.primary}
-          sunColor={theme.extend.colors.accent}
-        />
+        <div className="absolute top-0 right-0 p-5">
+          <DarkModeToggle
+            themes={THEMES}
+            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+            moonColor={theme.extend.colors.primary}
+            sunColor={theme.extend.colors.accent}
+          />
+        </div>
         <Component {...pageProps} />
       </div>
     </>
