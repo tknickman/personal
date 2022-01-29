@@ -67,14 +67,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           hoverColor
         )}
       >
-        <DarkModeToggle
-          className="absolute top-0 right-0 p-5"
-          themes={THEMES}
-          onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-          onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-          moonColor={theme.extend.colors.primary}
-          sunColor={theme.extend.colors.primary}
-        />
+        <div className="absolute top-0 right-0 p-5">
+          <DarkModeToggle
+            themes={THEMES}
+            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+            moonColor={theme.extend.colors.primary}
+            sunColor={theme.extend.colors.primary}
+          />
+        </div>
         <Component
           hoverColor={hoverColor}
           selectedItem={selectedItem}
