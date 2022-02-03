@@ -8,7 +8,7 @@ export default function Header() {
           <h2 className="text-base font-semibold tracking-wide uppercase text-primary">
             Senior Software Engineer
           </h2>
-          <h1 className="mt-1 text-4xl font-extrabold light:text-gray-900 dark:text-gray-100 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          <h1 className="mt-1 text-4xl font-extrabold light:text-dark dark:text-light sm:text-5xl sm:tracking-tight lg:text-6xl">
             Thomas E. Knickman
           </h1>
           <p

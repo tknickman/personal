@@ -6,23 +6,27 @@ import {
   LinkedIn,
   StackOverflow,
   Teknologist,
+  Resume,
   IconProps,
 } from "@tek/icons";
+
+export type LinkItem = {
+  name: string;
+  key: string;
+  borderColor: string;
+  textColor: string;
+  ringColor: string;
+  username: string;
+  url: string;
+  Icon: (props: IconProps) => JSX.Element;
+};
 
 type config = {
   THEMES: {
     DARK: string;
     LIGHT: string;
   };
-  LINKS: {
-    name: string;
-    key: string;
-    borderColor: string;
-    textColor: string;
-    username: string;
-    url: string;
-    Icon: (props: IconProps) => JSX.Element;
-  }[];
+  LINKS: Array<LinkItem>;
 };
 
 const config = {
@@ -36,6 +40,7 @@ const config = {
       key: "portfolio",
       borderColor: "border-portfolio",
       textColor: "text-portfolio",
+      ringColor: "focus-within:ring-portfolio",
       username: "thomasknickman.com",
       url: "http://www.thomasknickman.com/",
       Icon: Portfolio,
@@ -45,6 +50,7 @@ const config = {
       key: "linkedin",
       borderColor: "border-linkedin",
       textColor: "text-linkedin",
+      ringColor: "focus-within:ring-linkedin",
       username: "@tknickman",
       url: "https://www.linkedin.com/in/tknickman/",
       Icon: LinkedIn,
@@ -54,6 +60,7 @@ const config = {
       key: "instagram",
       borderColor: "border-instagram",
       textColor: "text-instagram",
+      ringColor: "focus-within:ring-instagram",
       username: "@tknickman",
       url: "https://www.instagram.com/tknickman/",
       Icon: Instagram,
@@ -63,6 +70,7 @@ const config = {
       key: "github",
       borderColor: "border-github",
       textColor: "text-github",
+      ringColor: "focus-within:ring-github",
       username: "@tknickman",
       url: "https://github.com/tknickman/",
       Icon: GitHub,
@@ -72,6 +80,7 @@ const config = {
       key: "teknologist",
       borderColor: "border-teknologist dark:border-white",
       textColor: "text-teknologist dark:text-white",
+      ringColor: "focus-within:ring-teknologist",
       username: "Teknologist LLC",
       url: "https://www.teknologist.co/",
       Icon: Teknologist,
@@ -81,6 +90,7 @@ const config = {
       key: "email",
       borderColor: "border-email",
       textColor: "text-email",
+      ringColor: "focus-within:ring-email",
       username: "tknickman@gmail.com",
       url: "mailto:tknickman+info@gmail.com",
       Icon: Email,
@@ -90,13 +100,22 @@ const config = {
       key: "stackoverflow",
       borderColor: "border-stackoverflow",
       textColor: "text-stackoverflow",
+      ringColor: "focus-within:ring-stackoverflow",
       username: "@tknickman",
       url: "https://stackoverflow.com/users/701449/tknickman",
       Icon: StackOverflow,
     },
+    {
+      name: "Resume",
+      key: "resume",
+      borderColor: "border-resume",
+      textColor: "text-resume",
+      ringColor: "focus-within:ring-resume",
+      username: "Thomas E. Knickman",
+      url: "https://www.tomk.link/resume.pdf",
+      Icon: Resume,
+    },
   ],
 };
-
-export type LinkItem = typeof config.LINKS[0];
 
 export default config;

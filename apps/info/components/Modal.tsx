@@ -57,7 +57,7 @@ const Modal = ({
                 <div className="mt-3 text-center sm:mt-5">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-lg font-medium leading-6 text-dark"
                   >
                     Under Construction
                   </Dialog.Title>
