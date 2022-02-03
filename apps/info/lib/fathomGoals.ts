@@ -6,6 +6,7 @@ const GOALS = {
   teknologistClick: "5SWJLCCN",
   emailClick: "TMY7OVN7",
   stackoverflowClick: "QX8NRAI7",
+  resumeClick: "9TVRJCUH",
   // theme selector
   setDarkMode: "BLKN6WJB",
   setLightMode: "G40DIMNJ",

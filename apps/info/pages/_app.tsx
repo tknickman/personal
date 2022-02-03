@@ -62,8 +62,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo {...SEO} />
       <div
         className={clsx(
-          "flex flex-col justify-center min-h-screen p-8 border-8 bg-gray-100 transition-colors",
-          "dark:bg-gray-900",
+          "flex flex-col justify-center min-h-screen p-8 border-8 bg-light transition-colors",
+          "dark:bg-dark",
           hoverColor
         )}
       >
