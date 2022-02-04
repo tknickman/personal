@@ -10,6 +10,8 @@ import {
   IconProps,
 } from "@tek/icons";
 
+const REF = "apps/info";
+
 export type LinkItem = {
   name: string;
   key: string;
@@ -42,7 +44,7 @@ const config = {
       textColor: "text-portfolio",
       ringColor: "focus-within:ring-portfolio",
       username: "thomasknickman.com",
-      url: "http://www.thomasknickman.com/",
+      url: `http://www.thomasknickman.com?ref=${REF}`,
       Icon: Portfolio,
     },
     {
@@ -82,7 +84,7 @@ const config = {
       textColor: "text-teknologist dark:text-white",
       ringColor: "focus-within:ring-teknologist",
       username: "Teknologist LLC",
-      url: "https://www.teknologist.co/",
+      url: `https://www.teknologist.co?ref=${REF}`,
       Icon: Teknologist,
     },
     {
@@ -112,7 +114,7 @@ const config = {
       textColor: "text-resume",
       ringColor: "focus-within:ring-resume",
       username: "Thomas E. Knickman",
-      url: "https://www.tomk.link/resume.pdf",
+      url: `https://www.tomk.link/embeds/resume.pdf?ref=${REF}`,
       Icon: Resume,
     },
   ],

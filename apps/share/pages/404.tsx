@@ -27,7 +27,7 @@ export default function FourOhFour() {
               </Link>
               <a
                 onClick={() => trackGoal(goals.contactClick, 0)}
-                href="https://www.tomk.info"
+                href="https://www.tomk.info?ref=apps/share"
                 className="inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-transparent rounded-md text-primary-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
               >
                 Get in Touch
