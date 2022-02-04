@@ -6,7 +6,7 @@ const navigation = [
   {
     name: "Contact",
     goal: () => trackGoal(fathomGoals.footerHomeClick, 0),
-    href: "http://www.tomk.info",
+    href: "http://www.tomk.info?ref=apps/teknologist",
     icon: <HomeIcon className="w-5 h-5 mr-3 -ml-1" aria-hidden="true" />,
   },
 ];

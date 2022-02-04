@@ -46,7 +46,7 @@ const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
               "border-white",
               "hover:bg-primary-700"
             )}
-            href="https://www.tomk.info"
+            href="https://www.tomk.info?ref=apps/parked"
           >
             <InformationCircleIcon
               className={clsx("w-5", "h-5", "mr-2", "-ml-1")}
