@@ -1,7 +1,9 @@
 # TEK Personal Monorepo
 
 Contains all code for personal sites.
-See breakdown below of personal domains.
+Written in [typescript](https://www.typescriptlang.org) using [react](https://reactjs.org), [next.js](https://nextjs.org), [tailwindcss](https://tailwindcss.com), with [turborepo](https://turborepo.org).
+
+See breakdown below for personal domains.
 
 | Domain                                                 | Directory                            | Description             | Hosted   |
 | ------------------------------------------------------ | ------------------------------------ | ----------------------- | -------- |
