@@ -50,6 +50,7 @@ See breakdown below for personal domains.
 
 ---
 
-[![next.js](./assets/next.svg)](https://www.nextjs.org)
+[![next.js](./assets/next-dark.svg)](https://www.nextjs.org#gh-dark-mode-only)
+[![next.js](./assets/next-light.svg)](https://www.nextjs.org#gh-light-mode-only)
 [![tailwindcss](./assets/tailwindcss.svg)](https://tailwindcss.com)
 [![turborepo](./assets/turborepo.svg)](https://www.turborepo.org)
