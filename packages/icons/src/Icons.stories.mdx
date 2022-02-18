@@ -1,0 +1,16 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Icon from "./Icon";
+import { All_ICONS, CodePen } from ".";
+
+<Meta title="@tek/icons" component={Icon} />
+
+export const Template = (args) => (
+  <div>
+    {All_ICONS.map((I) => (
+      <I key={Icon.name} {...args} />
+    ))}
+  </div>
+);
+
+<Story name="All Icons">{Template.bind({})}</Story>
