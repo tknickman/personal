@@ -7,7 +7,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import { Post } from "../../lib/types";
 import CoverImage from "../../components/blog/CoverImage";
 import Tag from "../../components/blog/Tag";
-import { Header, Footer, Breadcrumbs } from "../../components/layout";
+import { Header, Footer } from "../../components/layout";
 
 type Props = {
   post: Post;
@@ -33,18 +33,18 @@ const Post = ({ post }: Props) => {
   return (
     <>
       <Header layout="blog" />
-      <article className="relative py-16 overflow-hidden bg-light dark:bg-dark">
+      <article className="bg-light dark:bg-dark relative overflow-hidden py-16">
         <Head>
           <title>{`${post.title} | ${post.author.name}`}</title>
           <meta property="og:image" content={post.ogImage.url} />
         </Head>
         <div className="relative px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto text-lg max-w-prose">
+          <div className="mx-auto max-w-prose text-lg">
             <h1>
-              <span className="block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase">
+              <span className="block text-center text-base font-semibold uppercase tracking-wide text-indigo-600">
                 {post.subtitle}
               </span>
-              <span className="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
+              <span className="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                 {post.title}
               </span>
             </h1>
@@ -55,7 +55,7 @@ const Post = ({ post }: Props) => {
             ))}
           </div>
 
-          <div className="mx-auto mt-6 prose prose-lg text-gray-500 prose-indigo dark:prose-invert">
+          <div className="prose prose-lg prose-indigo dark:prose-invert mx-auto mt-6 text-gray-500">
             <CoverImage
               title={post.title}
               src={post.coverImage}

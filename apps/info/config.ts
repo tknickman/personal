@@ -24,18 +24,10 @@ export type LinkItem = {
 };
 
 type config = {
-  THEMES: {
-    DARK: string;
-    LIGHT: string;
-  };
   LINKS: Array<LinkItem>;
 };
 
 const config = {
-  THEMES: {
-    DARK: "dark",
-    LIGHT: "light",
-  },
   LINKS: [
     {
       name: "Portfolio",

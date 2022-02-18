@@ -19,12 +19,12 @@ const navigation = {
   ],
 };
 
-const Footer = ({}) => {
+const Footer = () => {
   return (
     <footer className="dark:dark">
-      <div className="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
         <nav
-          className="flex flex-wrap justify-center -mx-5 -my-2"
+          className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -38,7 +38,7 @@ const Footer = ({}) => {
             </div>
           ))}
         </nav>
-        <div className="flex justify-center mt-8 space-x-6">
+        <div className="mt-8 flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -46,11 +46,11 @@ const Footer = ({}) => {
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="w-6 h-6" aria-hidden="true" />
+              <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-base text-center text-gray-400">
+        <p className="mt-8 text-center text-base text-gray-400">
           &copy; {new Date().getFullYear()} Thomas E. Knickman. All rights
           reserved.
         </p>

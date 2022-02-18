@@ -62,7 +62,7 @@ const Divider = ({ start, end }: { start: number; end: number }) => {
   );
 
   return (
-    <div className="relative h-32 my-8 overflow-hidden" ref={ref} id="tek">
+    <div className="relative my-8 h-32 overflow-hidden" ref={ref} id="tek">
       <motion.div
         style={{ rotate }}
         initial={{
@@ -71,7 +71,7 @@ const Divider = ({ start, end }: { start: number; end: number }) => {
         animate={{ borderColor: company.color }}
         transition={{ duration: 0.4 }}
         className={clsx(
-          "absolute w-[110vw] border-t-8 border-double top-1/2 origin-center -left-2"
+          "absolute top-1/2 -left-2 w-[110vw] origin-center border-t-8 border-double"
         )}
       />
     </div>

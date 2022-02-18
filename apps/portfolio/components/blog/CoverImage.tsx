@@ -21,7 +21,7 @@ const CoverImage = ({
       src={src}
       alt={`Cover Image for ${title}`}
       className={clsx("shadow-sm", {
-        "hover:shadow-md transition-shadow duration-200": slug,
+        "transition-shadow duration-200 hover:shadow-md": slug,
       })}
       layout="responsive"
       width={width}

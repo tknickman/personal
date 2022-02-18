@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import config from "../config";
-
-const { THEMES } = config;
+import { THEMES } from "@tek/ui";
 
 export default class MyDocument extends Document {
   render() {

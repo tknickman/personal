@@ -10,12 +10,9 @@ import { Portfolio } from "@tek/icons";
 import { DarkModeToggle } from "@tek/ui";
 import clsx from "clsx";
 import { ReactNode } from "react";
-import config from "../../config";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import colors from "tailwindcss/colors";
 import { useCompany } from "../../contexts/Company";
-
-const { THEMES } = config;
 
 const Item = ({
   children,
@@ -34,7 +31,7 @@ const Item = ({
       exit={{ marginTop: "200px", opacity: 0.1, rotate: -20 }}
       transition={{ duration: 0.4 }}
       className={clsx(
-        "mt-1 font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl h-full",
+        "mt-1 h-full text-4xl font-bold sm:text-6xl md:text-8xl lg:text-9xl",
         className
       )}
     >
@@ -61,14 +58,10 @@ const Hero = () => {
   return (
     <div id="Landing" className="snap-start snap-always" ref={ref}>
       <a className="absolute top-8 left-8" href="#">
-        <Portfolio color={"dark:text-gray-200"} />
+        <Portfolio className="dark:text-gray-200" />
       </a>
-      <div className="absolute p-5 top-4 right-4">
-        <DarkModeToggle
-          themes={THEMES}
-          moonColor={colors.gray["800"]}
-          sunColor={"white"}
-        />
+      <div className="absolute top-4 right-4 p-5">
+        <DarkModeToggle />
       </div>
       <motion.div
         animate={{
@@ -76,11 +69,11 @@ const Hero = () => {
         }}
         transition={{ duration: 0.4 }}
         className={clsx(
-          "flex items-center justify-center flex-col h-screen px-8 pt-8 border-8"
+          "flex h-screen flex-col items-center justify-center border-8 px-8 pt-8"
         )}
       >
         <motion.div className="text-center" style={{ y }}>
-          <h2 className="mb-4 text-base font-semibold tracking-wide text-gray-600 uppercase dark:text-gray-200">
+          <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-200">
             I {company.verb}
             <AnimatePresence exitBeforeEnter>
               <motion.div
@@ -106,7 +99,7 @@ const Hero = () => {
               <Item id={company.name} key={company.name}>
                 <mark
                   className={clsx(
-                    "p-2 dark:text-dark text-light",
+                    "dark:text-dark text-light p-2",
                     company.background
                   )}
                 >
@@ -118,7 +111,7 @@ const Hero = () => {
         </motion.div>
         <div
           className={clsx(
-            "absolute bottom-0 transform -translate-x-1/2 w-14 h-14 left-1/2"
+            "absolute bottom-0 left-1/2 h-14 w-14 -translate-x-1/2 transform"
           )}
         >
           <motion.a
@@ -149,10 +142,10 @@ const Hero = () => {
               height: 50,
             }}
             className={clsx(
-              "block origin-bottom p-3 text-light rounded-t-full dark:text-dark"
+              "text-light dark:text-dark block origin-bottom rounded-t-full p-3"
             )}
           >
-            <ChevronDownIcon className="w-8 h-8" aria-hidden="true" />
+            <ChevronDownIcon className="h-8 w-8" aria-hidden="true" />
           </motion.a>
         </div>
       </motion.div>

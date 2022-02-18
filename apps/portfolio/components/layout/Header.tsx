@@ -6,8 +6,6 @@ import clsx from "clsx";
 import { useEffect } from "react";
 import colors from "tailwindcss/colors";
 import { DarkModeToggle } from "@tek/ui";
-import config from "../../config";
-const { THEMES } = config;
 
 import { useCompany } from "../../contexts/Company";
 
@@ -42,10 +40,10 @@ function Header({ layout = "main" }: { layout?: "main" | "blog" }) {
       ref={ref}
     >
       <nav
-        className="px-4 mx-auto text-white dark:text-dark max-w-7xl sm:px-6 lg:px-8 text-bold"
+        className="dark:text-dark text-bold mx-auto max-w-7xl px-4 text-white sm:px-6 lg:px-8"
         aria-label="Top"
       >
-        <div className="flex items-center justify-between w-full py-2">
+        <div className="flex w-full items-center justify-between py-2">
           <Link href="/" passHref>
             <motion.a
               whileHover={{
@@ -53,24 +51,19 @@ function Header({ layout = "main" }: { layout?: "main" | "blog" }) {
                 rotate: -10,
               }}
             >
-              <Portfolio color={"text-white dark:text-dark"} />
+              <Portfolio className="dark:text-dark text-white" />
             </motion.a>
           </Link>
           <div className="ml-10 space-x-8 text-center lg:block">
             {navigation.map((link) => (
               <Link key={link.name} href={link.href} passHref>
-                <a className="text-sm sm:text-base hover:underline underline-offset-4 decoration-dark decoration-4 decoration-double">
+                <a className="decoration-dark text-sm decoration-double decoration-4 underline-offset-4 hover:underline sm:text-base">
                   {link.name}
                 </a>
               </Link>
             ))}
             <div className="inline-block">
-              <DarkModeToggle
-                themes={THEMES}
-                moonColor={colors.gray["800"]}
-                sunColor={"white"}
-                size={14}
-              />
+              <DarkModeToggle size={14} />
             </div>
           </div>
         </div>

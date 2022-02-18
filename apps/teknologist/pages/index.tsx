@@ -1,6 +1,6 @@
 import { MailIcon } from "@heroicons/react/outline";
-import clsx from "clsx";
 import { trackGoal } from "fathom-client";
+import { Button } from "@tek/ui";
 
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
@@ -26,58 +26,35 @@ export default function Home() {
   return (
     <div>
       <div className="grid justify-items-center md:justify-items-start">
-        <div className="w-20 mt-4 ml-0 md:ml-4">
+        <div className="mt-4 ml-0 w-20 md:ml-4">
           <Logo />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center min-h-full py-2 text-primary dark:text-white">
+      <div className="text-primary flex min-h-full flex-col items-center justify-center py-2 dark:text-white">
         <main>
-          <div className="px-4 py-48 mx-auto max-w-7xl sm:py-64 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-48 sm:py-64 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-base font-semibold tracking-wide uppercase text-accent">
+              <h2 className="text-accent text-base font-semibold uppercase tracking-wide">
                 TEKnologist LLC
               </h2>
               <p className="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
                 Bringing{" "}
-                <span className="underline decoration-accent">ideas</span> to{" "}
-                <span className="underline decoration-accent">life</span>
+                <span className="decoration-accent underline">ideas</span> to{" "}
+                <span className="decoration-accent underline">life</span>
               </p>
-              <p className="max-w-xl mx-auto mt-5 text-xl text-black-500">
+              <p className="text-black-500 mx-auto mt-5 max-w-xl text-xl">
                 Modern web development<span className="text-accent">.</span> MVP
                 design<span className="text-accent">.</span> Product guidance
                 <span className="text-accent">.</span>
               </p>
               <div className="mt-8">
-                <button
+                <Button
                   onClick={onContact}
-                  className={clsx(
-                    "inline-flex",
-                    "items-center",
-                    "px-4",
-                    "py-2",
-                    "text-base",
-                    "font-medium",
-                    "text-white",
-                    "border",
-                    "border-transparent",
-                    "rounded-md",
-                    "shadow-sm",
-                    "bg-primary",
-                    "dark:bg-accent",
-                    "hover:ring-accent",
-                    "hover:ring-2",
-                    "hover:ring-offset-2",
-                    "hover:ring-offset-white",
-                    "dark:hover:ring-offset-primary",
-                    "focus:outline-none",
-                    "focus:ring-2",
-                    "focus:ring-offset-2",
-                    "focus:ring-accent"
-                  )}
+                  className="bg-primary dark:hover:ring-offset-primary text-white hover:ring-offset-white"
                 >
-                  <MailIcon className="w-5 h-5 mr-3 -ml-1" aria-hidden="true" />
+                  <MailIcon className="mr-3 -ml-1 h-5 w-5" aria-hidden="true" />
                   Get in touch!
-                </button>
+                </Button>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import Header from "../components/Header";
-import ButtonLink from "../components/Button";
 import { CodeIcon, InformationCircleIcon } from "@heroicons/react/outline";
 import { trackGoal } from "fathom-client";
+import { Anchor } from "@tek/ui";
 
 import goals from "../lib/fathomGoals";
 
@@ -10,7 +10,7 @@ const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
   <>
     <Header />
     <main className={clsx("grid")}>
-      <div className="max-w-lg mx-auto mt-2 text-base text-center text-gray-500 dark:text-gray-300">
+      <div className="mx-auto mt-2 max-w-lg text-center text-base text-gray-500 dark:text-gray-300">
         <p>This site has run its course, and has been shutdown.</p>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           If you found this site useful, please reach out to me below - I would
@@ -18,14 +18,10 @@ const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
           available below.
         </p>
         <div className="mt-12">
-          <ButtonLink
+          <Anchor
             onClick={() => trackGoal(goals.sourceClick, 0)}
-            className={clsx(
-              "text-gray-700",
-              "bg-white",
-              "border-primary-500",
-              "hover:bg-gray-100"
-            )}
+            className="border-primary-700 ring-offset-light dark:ring-offset-dark ring-primary-700 bg-white text-gray-700 dark:ring-white"
+            target="_blank"
             href={
               hostName && `https://www.github.com/tknickman/${hostName}.com`
             }
@@ -35,17 +31,13 @@ const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
               aria-hidden="true"
             />
             View Source
-          </ButtonLink>
+          </Anchor>
         </div>
         <div className="mt-2">
-          <ButtonLink
+          <Anchor
             onClick={() => trackGoal(goals.contactClick, 0)}
-            className={clsx(
-              "text-white",
-              "bg-primary-600",
-              "border-white",
-              "hover:bg-primary-700"
-            )}
+            className="bg-primary-600 ring-offset-light dark:ring-offset-dark ring-primary-700 text-white"
+            target="_blank"
             href="https://www.tomk.info?ref=apps/parked"
           >
             <InformationCircleIcon
@@ -53,7 +45,7 @@ const ParkedLandingPage = ({ hostName }: { hostName?: string }) => (
               aria-hidden="true"
             />
             Get in Touch
-          </ButtonLink>
+          </Anchor>
         </div>
       </div>
     </main>

@@ -6,9 +6,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import clsx from "clsx";
-import config from "../config";
-
-const { THEMES } = config;
+import { THEMES } from "@tek/ui";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

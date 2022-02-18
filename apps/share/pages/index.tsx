@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhotographIcon } from "@heroicons/react/outline";
 import { trackGoal } from "fathom-client";
+import { Button } from "@tek/ui";
 import config from "../config";
 
 import goals from "../lib/fathomGoals";
@@ -43,19 +44,19 @@ const Home = () => {
       <Head>
         <title>TEK - Public Asset Directory</title>
       </Head>
-      <div className="px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold tracking-wide text-gray-500 uppercase dark:text-gray-500">
+          <h2 className="text-base font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-500">
             Thomas E. Knickman
           </h2>
-          <p className="mt-1 text-4xl font-extrabold text-primary-600 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          <p className="text-primary-600 mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">
             Public Asset Directory
           </p>
           <form onSubmit={jumpToAsset}>
             <div className="relative mx-auto mt-4 rounded-md shadow-sm md:w-1/2 lg:w-1/4">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                 <PhotographIcon
-                  className={clsx("w-5 h-5 text-gray-400", {
+                  className={clsx("h-5 w-5 text-gray-400", {
                     "text-red-700": error,
                   })}
                   aria-hidden="true"
@@ -71,10 +72,10 @@ const Home = () => {
                 }}
                 id="key"
                 className={clsx(
-                  "focus:outline-none block w-full pl-10 py-2 sm:text-md rounded-full border focus:ring-offset-2 focus:ring-1",
+                  "sm:text-md mb-4 block w-full rounded-full border py-2 pl-10 focus:outline-none focus:ring-1 focus:ring-offset-2",
                   {
                     "border-primary-600  focus:ring-primary-600": !error,
-                    "border-red-700 text-red-700 focus:ring-red-700 placeholder-red-700":
+                    "border-red-700 text-red-700 placeholder-red-700 focus:ring-red-700":
                       error,
                   }
                 )}
@@ -82,13 +83,13 @@ const Home = () => {
               />
             </div>
           </form>
-          <button
+          <Button
             onClick={jumpToAsset}
-            type="button"
-            className="inline-flex items-center p-2 mt-4 text-white border border-transparent rounded-full shadow-sm bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            rounded
+            className="bg-primary-600 ring-primary-600 dark:ring-offset-dark ring-offset-light text-white"
           >
-            <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
-          </button>
+            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+          </Button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Tag = ({
     <a
       href={href}
       className={clsx(
-        "inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium text-gray-800",
+        "inline-flex items-center rounded-md px-2.5 py-0.5 text-sm font-medium text-gray-800",
         color
       )}
     >
