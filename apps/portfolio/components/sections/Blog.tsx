@@ -33,9 +33,9 @@ const posts = [
 
 export default function Example() {
   return (
-    <div className="px-4 pt-8 pb-20 dark:bg-dark sm:px-6 lg:px-8">
-      <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
-        <div className="grid gap-16 pt-12 mt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+    <div className="dark:bg-dark px-4 pt-8 pb-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl">
+        <div className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
           {posts.map((post) => (
             <div key={post.title}>
               <div>
@@ -43,14 +43,14 @@ export default function Example() {
                   <span
                     className={clsx(
                       post.category.color,
-                      "inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+                      "inline-flex items-center rounded-full px-3 py-0.5 text-sm font-medium"
                     )}
                   >
                     {post.category.name}
                   </span>
                 </a>
               </div>
-              <a href={post.href} className="block mt-4">
+              <a href={post.href} className="mt-4 block">
                 <p className="text-xl font-semibold dark:text-gray-400">
                   {post.title}
                 </p>
@@ -58,11 +58,11 @@ export default function Example() {
                   {post.description}
                 </p>
               </a>
-              <div className="flex items-center mt-6">
+              <div className="mt-6 flex items-center">
                 <div className="flex-shrink-0">
                   <span className="sr-only">{post.author.name}</span>
                   <Image
-                    className="w-10 h-10 rounded-full"
+                    className="h-10 w-10 rounded-full"
                     src={post.author.imageUrl}
                     width={40}
                     height={40}

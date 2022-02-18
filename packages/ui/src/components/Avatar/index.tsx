@@ -1,11 +1,11 @@
 import AvatarProps from "./types";
 
 const Avatar = ({ href, image, profile }: AvatarProps) => (
-  <a href={href} className="flex-shrink-0 block group">
+  <a href={href} className="group block flex-shrink-0">
     <div className="flex items-center">
       <div>
         <img
-          className="inline-block rounded-full h-9 w-9"
+          className="inline-block h-9 w-9 rounded-full"
           src={image.src}
           alt=""
         />

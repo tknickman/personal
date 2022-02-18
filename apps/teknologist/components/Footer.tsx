@@ -7,14 +7,14 @@ const navigation = [
     name: "Contact",
     goal: () => trackGoal(fathomGoals.footerHomeClick, 0),
     href: "http://www.tomk.info?ref=apps/teknologist",
-    icon: <HomeIcon className="w-5 h-5 mr-3 -ml-1" aria-hidden="true" />,
+    icon: <HomeIcon className="mr-3 -ml-1 h-5 w-5" aria-hidden="true" />,
   },
 ];
 
 export default function Example() {
   return (
     <footer className="fixed bottom-0 w-full">
-      <div className="py-4 mx-5 md:flex md:items-center md:justify-between">
+      <div className="mx-5 py-4 md:flex md:items-center md:justify-between">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
             <a
@@ -30,8 +30,8 @@ export default function Example() {
             </a>
           ))}
         </div>
-        <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-sm text-center text-gray-400">
+        <div className="mt-8 md:order-1 md:mt-0">
+          <p className="text-center text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Teknologist LLC. All rights
             reserved.
           </p>

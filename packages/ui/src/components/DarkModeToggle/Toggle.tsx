@@ -1,31 +1,24 @@
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import useDarkMode from "./useDarkMode";
 import { DarkModeToggleProps } from "./types";
+import { useTheme } from "./ThemeContext";
 
-const DarkModeToggle = ({
-  themes,
-  moonColor,
-  sunColor,
-  onSetLightMode,
-  onSetDarkMode,
-  size = 40,
-  ...other
-}: DarkModeToggleProps) => {
-  const [colorTheme, toggleTheme] = useDarkMode({
-    themes,
-    onSetLightMode,
-    onSetDarkMode,
-  });
+const DarkModeToggle = ({ size = 40, ...other }: DarkModeToggleProps) => {
+  const { theme, THEMES, toggleTheme, toggleConfig } = useTheme();
 
   return (
-    <DarkModeSwitch
-      checked={colorTheme === themes.DARK}
-      onChange={toggleTheme}
-      size={size}
-      moonColor={moonColor}
-      sunColor={sunColor}
-      {...other}
-    />
+    <button
+      onKeyDown={(e) => e.code === "Enter" && toggleTheme()}
+      aria-label={`switch to ${theme === THEMES.DARK ? "light" : "dark"} mode`}
+      tabIndex={0}
+    >
+      <DarkModeSwitch
+        checked={theme === THEMES?.LIGHT}
+        onChange={toggleTheme}
+        {...toggleConfig}
+        size={size}
+        {...other}
+      />
+    </button>
   );
 };
 

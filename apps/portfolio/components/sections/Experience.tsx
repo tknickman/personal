@@ -17,10 +17,10 @@ const Stats = () => {
           <LanguageChart />
         </div>
         <div className="flex flex-row flex-wrap">
-          <div className="w-full lg:w-1/2 h-96">
+          <div className="h-96 w-full lg:w-1/2">
             <PositionsChart />
           </div>
-          <div className="w-full lg:w-1/2 h-96">
+          <div className="h-96 w-full lg:w-1/2">
             <WorkChart />
           </div>
         </div>

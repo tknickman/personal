@@ -17,7 +17,7 @@ const Modal = ({
         className="fixed inset-0 z-10 overflow-y-auto"
         onClose={onClose}
       >
-        <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -27,12 +27,12 @@ const Modal = ({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" />
+            <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
           <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
+            className="hidden sm:inline-block sm:h-screen sm:align-middle"
             aria-hidden="true"
           >
             &#8203;
@@ -46,18 +46,18 @@ const Modal = ({
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+            <div className="inline-block transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6 sm:align-middle">
               <div>
-                <div className="flex items-center justify-center w-12 h-12 mx-auto border-2 rounded-full border-primary">
+                <div className="border-primary mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2">
                   <BeakerIcon
-                    className="w-6 h-6 text-primary"
+                    className="text-primary h-6 w-6"
                     aria-hidden="true"
                   />
                 </div>
                 <div className="mt-3 text-center sm:mt-5">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-dark"
+                    className="text-dark text-lg font-medium leading-6"
                   >
                     Under Construction
                   </Dialog.Title>
@@ -72,7 +72,7 @@ const Modal = ({
               <div className="mt-5 sm:mt-6">
                 <button
                   type="button"
-                  className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:text-sm"
+                  className="bg-primary focus:ring-primary inline-flex w-full justify-center rounded-md border border-transparent px-4 py-2 text-base font-medium text-white shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-sm"
                   onClick={() => onClose()}
                 >
                   Close

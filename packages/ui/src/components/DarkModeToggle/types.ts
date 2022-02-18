@@ -3,17 +3,16 @@ export type DarkModeConfig = {
   LIGHT: string;
 };
 
-export type DarkModeToggleProps = {
-  className?: string;
-  moonColor: string;
-  sunColor: string;
-  themes: DarkModeConfig;
-  size?: number;
-  onSetLightMode?: () => void;
-  onSetDarkMode?: () => void;
+export type ThemeContextValue = {
+  theme: string;
+  toggleTheme: () => void;
+  THEMES: DarkModeConfig;
+  toggleConfig?: DarkModeToggleProps;
 };
 
-export type UseDarkMode = Omit<
-  DarkModeToggleProps,
-  "moonColor" | "sunColor" | "size"
->;
+export type DarkModeToggleProps = {
+  moonColor?: string;
+  sunColor?: string;
+  className?: string;
+  size?: number;
+};

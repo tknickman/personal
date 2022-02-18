@@ -1,5 +1,4 @@
 import { getAllPosts } from "../lib/api/posts";
-import { Post } from "../lib/types";
 
 import { CompanyContext } from "../contexts/Company";
 

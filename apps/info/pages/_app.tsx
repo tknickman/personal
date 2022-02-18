@@ -4,20 +4,18 @@ import { useState } from "react";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { DarkModeToggle } from "@tek/ui";
+import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { getDomains, useFathom } from "@tek/utils";
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
 
 import { theme } from "../tailwind.config";
 import SEO from "../next-seo.config";
-import config, { LinkItem } from "../config";
+import { LinkItem } from "../config";
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
-
-const { THEMES } = config;
 
 function MyApp({ Component, pageProps }: AppProps) {
   useFathom(fathomSiteId as string, {
@@ -28,7 +26,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   const hoverColor = selectedItem ? selectedItem.borderColor : "border-primary";
 
   return (
-    <>
+    <ThemeContext
+      onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+      onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+      toggleConfig={{
+        moonColor: theme.extend.colors.primary,
+        sunColor: theme.extend.colors.primary,
+      }}
+    >
       <Head>
         <link
           rel="apple-touch-icon"
@@ -62,19 +67,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo {...SEO} />
       <div
         className={clsx(
-          "flex flex-col justify-center min-h-screen p-8 border-8 bg-light transition-colors",
+          "bg-light flex min-h-screen flex-col justify-center border-8 p-8 transition-colors",
           "dark:bg-dark",
           hoverColor
         )}
       >
         <div className="absolute top-0 right-0 p-5">
-          <DarkModeToggle
-            themes={THEMES}
-            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-            moonColor={theme.extend.colors.primary}
-            sunColor={theme.extend.colors.primary}
-          />
+          <DarkModeToggle />
         </div>
         <Component
           hoverColor={hoverColor}
@@ -83,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           {...pageProps}
         />
       </div>
-    </>
+    </ThemeContext>
   );
 }
 

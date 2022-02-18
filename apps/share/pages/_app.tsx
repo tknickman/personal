@@ -2,7 +2,7 @@ import "tailwindcss/tailwind.css";
 import { AppProps } from "next/app";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
-import { DarkModeToggle } from "@tek/ui";
+import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { trackGoal } from "fathom-client";
 import Head from "next/head";
 import { useFathom, getDomains } from "@tek/utils";
@@ -10,7 +10,6 @@ import { useFathom, getDomains } from "@tek/utils";
 // configs
 import { theme } from "../tailwind.config";
 import SEO from "../next-seo.config";
-import config from "../config";
 
 // other
 import goals from "../lib/fathomGoals";
@@ -19,8 +18,6 @@ const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 
-const { THEMES } = config;
-
 const ShareApp = ({ Component, pageProps }: AppProps) => {
   useFathom(fathomSiteId as string, {
     url: fathomUrl,
@@ -28,7 +25,14 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
   });
 
   return (
-    <>
+    <ThemeContext
+      onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+      onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+      toggleConfig={{
+        sunColor: theme.extend.colors.secondary,
+        moonColor: theme.extend.colors.primary["600"],
+      }}
+    >
       <Head>
         <link
           rel="apple-touch-icon"
@@ -61,23 +65,20 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
       <NextSeo {...SEO} />
       <div
         className={clsx(
-          "flex flex-col justify-center min-h-screen p-8 border-8 bg-gray-100 transition-colors",
-          "dark:bg-gray-900",
+          "bg-light flex min-h-screen flex-col justify-center border-8 p-8 transition-colors",
+          "dark:bg-dark",
           "border-primary-600"
         )}
       >
         <div className="absolute top-0 right-0 p-5">
           <DarkModeToggle
-            themes={THEMES}
-            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-            moonColor={theme.extend.colors.primary["600"]}
-            sunColor={theme.extend.colors.secondary}
+            sunColor={theme.extend.colors.primary["600"]}
+            moonColor={theme.extend.colors.secondary}
           />
         </div>
         <Component {...pageProps} />
       </div>
-    </>
+    </ThemeContext>
   );
 };
 

@@ -1,7 +1,7 @@
 import "tailwindcss/tailwind.css";
 import { AppProps } from "next/app";
 import { NextSeo } from "next-seo";
-import { DarkModeToggle } from "@tek/ui";
+import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { useFathom, getDomains } from "@tek/utils";
 import Head from "next/head";
 import clsx from "clsx";
@@ -11,13 +11,9 @@ import SEO from "../next-seo.config";
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
 
-import config from "../config";
-
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
-
-const { THEMES } = config;
 
 function MyApp({ Component, pageProps }: AppProps) {
   useFathom(fathomSiteId as string, {
@@ -26,7 +22,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <>
+    <ThemeContext
+      onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
+      onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
+      toggleConfig={{
+        sunColor: theme.extend.colors.accent,
+        moonColor: theme.extend.colors.primary,
+      }}
+    >
       <Head>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link
@@ -61,22 +64,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo {...SEO} />
       <div
         className={clsx(
-          "bg-gray-100 transition-colors min-h-screen",
+          "min-h-screen bg-gray-100 transition-colors",
           "dark:bg-gray-900"
         )}
       >
         <div className="absolute top-0 right-0 p-5">
-          <DarkModeToggle
-            themes={THEMES}
-            onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-            onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-            moonColor={theme.extend.colors.primary}
-            sunColor={theme.extend.colors.accent}
-          />
+          <DarkModeToggle />
         </div>
         <Component {...pageProps} />
       </div>
-    </>
+    </ThemeContext>
   );
 }
 

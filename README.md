@@ -50,7 +50,13 @@ See breakdown below for personal domains.
 
 ---
 
-[![next.js](./assets/next-dark.svg)](https://www.nextjs.org#gh-dark-mode-only)
-[![next.js](./assets/next-light.svg)](https://www.nextjs.org#gh-light-mode-only)
+[![typescript](./assets/typescript.svg)](https://www.typescript.org)
+[![react](./assets/react.svg)](https://www.react.org)
+[![next.js](./assets/dark/next.svg)](https://www.nextjs.org#gh-dark-mode-only)
+[![next.js](./assets/light/next.svg)](https://www.nextjs.org#gh-light-mode-only)
 [![tailwindcss](./assets/tailwindcss.svg)](https://tailwindcss.com)
-[![turborepo](./assets/turborepo.svg)](https://www.turborepo.org)
+[![turborepo](./assets/dark/turborepo.svg)](https://www.turborepo.org#gh-dark-mode-only)
+[![turborepo](./assets/light/turborepo.svg)](https://www.turborepo.org#gh-light-mode-only)
+[![vercel](./assets/dark/vercel.svg)](https://www.vercel.com#gh-dark-mode-only)
+[![vercel](./assets/light/vercel.svg)](https://www.vercel.com#gh-light-mode-only)
+[![aws](./assets/aws.svg)](https://www.aws.com)

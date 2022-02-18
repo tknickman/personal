@@ -1,37 +1,38 @@
 import Link from "next/link";
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
+import { Anchor } from "@tek/ui";
 
 export default function FourOhFour() {
   return (
     <div className="min-h-screen px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
       <div className="mx-auto max-w-max">
         <main className="sm:flex">
-          <p className="text-4xl font-extrabold text-primary-600 sm:text-5xl">
+          <p className="text-primary-600 text-4xl font-extrabold sm:text-5xl">
             404
           </p>
           <div className="sm:ml-6">
             <div className="sm:border-l sm:border-gray-200 sm:pl-6">
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary-600 sm:text-5xl">
+              <h1 className="text-primary-600 text-4xl font-extrabold tracking-tight sm:text-5xl">
                 Page not found
               </h1>
               <p className="mt-1 text-base text-gray-500">
                 Please check the URL in the address bar and try again.
               </p>
             </div>
-            <div className="flex mt-10 space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-              <Link href="/">
-                <a className="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+            <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
+              <Link href="/" passHref>
+                <Anchor className="bg-primary-600 ring-primary-600 ring-offset-light dark:ring-offset-dark text-white">
                   Home
-                </a>
+                </Anchor>
               </Link>
-              <a
+              <Anchor
                 onClick={() => trackGoal(goals.contactClick, 0)}
                 href="https://www.tomk.info?ref=apps/share"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium bg-white border border-transparent rounded-md text-primary-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                className="border-primary-700 text-primary-700 ring-primary-700 dark:ring-light ring-offset-light dark:ring-offset-dark bg-white"
               >
                 Get in Touch
-              </a>
+              </Anchor>
             </div>
           </div>
         </main>

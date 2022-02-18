@@ -40,8 +40,8 @@ const Item = ({
       onMouseLeave={() => setSelectedItem(null)}
       key={linkItem.key}
       className={clsx(
-        "relative flex items-center px-6 py-5 space-x-3 bg-white border-2 rounded-lg shadow-sm transition-colors text-left",
-        "focus-within:ring-4 focus-within:ring-offset-4 dark:ring-offset-dark ring-offset-light",
+        "relative flex items-center space-x-3 rounded-lg border-2 bg-white px-6 py-5 text-left shadow-sm transition-colors",
+        "dark:ring-offset-dark ring-offset-light focus-within:ring-4 focus-within:ring-offset-4",
         linkItem.ringColor,
         "dark:bg-dark",
         {
@@ -52,15 +52,15 @@ const Item = ({
       )}
     >
       <div className="shrink-0">
-        <div className="w-10 h-10 rounded-full">
-          <linkItem.Icon color={linkItem.textColor} />
+        <div className="h-10 w-10 rounded-full">
+          <linkItem.Icon className={linkItem.textColor} />
         </div>
       </div>
-      <div className="flex-1 min-w-0">
+      <div className="min-w-0 flex-1">
         <span className="absolute inset-0" aria-hidden="true" />
         <p
           className={clsx(
-            "text-sm font-medium text-dark",
+            "text-dark text-sm font-medium",
             "dark:text-gray-200"
           )}
         >
@@ -68,7 +68,7 @@ const Item = ({
         </p>
         <p
           className={clsx(
-            "text-sm text-gray-500 truncate",
+            "truncate text-sm text-gray-500",
             "dark:text-gray-500"
           )}
         >

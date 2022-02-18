@@ -33,7 +33,7 @@ const SectionHeading = ({
         "text-center": align === "center",
       })}
     >
-      <div className="w-full h-full font-bold">
+      <div className="h-full w-full font-bold">
         <motion.div
           key={number}
           initial={{
@@ -54,7 +54,7 @@ const SectionHeading = ({
           viewport={{ once: true, amount: "some" }}
           className={clsx(
             fontSize,
-            "pb-8 underline font-outline underline-offset-8 decoration-double"
+            "font-outline pb-8 underline decoration-double underline-offset-8"
           )}
         >
           {number}
@@ -127,7 +127,7 @@ const Section = ({
         }}
         animate={{ backgroundColor }}
         transition={{ duration: 0.4 }}
-        className={clsx("text-center  scroll-mt-12", {
+        className={clsx("scroll-mt-12  text-center", {
           "dark:text-gray-200": background === "default",
           "dark:text-dark": background === "accent",
         })}
@@ -146,7 +146,7 @@ const Section = ({
         </div>
         {/* content */}
         {/* overflow hidden is a weird hack for flexbox */}
-        <div className="pt-3 mx-2 overflow-hidden sm:mx-4 grow">{children}</div>
+        <div className="mx-2 grow overflow-hidden pt-3 sm:mx-4">{children}</div>
       </motion.div>
     );
   }
@@ -157,7 +157,7 @@ const Section = ({
       }}
       animate={{ backgroundColor }}
       transition={{ duration: 0.4 }}
-      className={clsx("text-center sm:text-left scroll-mt-6", {
+      className={clsx("scroll-mt-6 text-center sm:text-left", {
         "dark:text-gray-200": background === "default",
         "dark:text-dark": background === "accent",
       })}
@@ -174,7 +174,7 @@ const Section = ({
         />
         {/* content */}
         {/* overflow hidden is a weird hack for flexbox */}
-        <div className="overflow-hidden grow">{children}</div>
+        <div className="grow overflow-hidden">{children}</div>
       </div>
     </motion.div>
   );

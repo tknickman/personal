@@ -11,11 +11,11 @@ const About = () => {
       background="accent"
     >
       <div className="pt-3">
-        <div className="text-sm font-semibold tracking-wide uppercase text-dark">
+        <div className="text-dark text-sm font-semibold uppercase tracking-wide">
           Thomas E. Knickman
         </div>
 
-        <p className="mt-2 text-4xl text-dark">
+        <p className="text-dark mt-2 text-4xl">
           Text about me text about me Text about me text about me Text about me
           text about me Text about me text about me Text about me text about me
           Text about me text about me Text about me text about me Text about me

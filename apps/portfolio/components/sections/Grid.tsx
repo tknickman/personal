@@ -114,7 +114,7 @@ const CommitCount = ({
           commitCount > 1 ? "s" : ""
         }`}
         className={clsx(
-          "absolute w-6 h-6 text-light dark:text-dark font-bold rounded-full shadow-2xl top-2 right-2",
+          "text-light dark:text-dark absolute top-2 right-2 h-6 w-6 rounded-full font-bold shadow-2xl",
           background
         )}
         {...linkData}
@@ -149,7 +149,7 @@ const RepoCard = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       whileHover={{ scale: 1.05, rotate: getRotation(), borderColor: color }}
-      className="relative flex flex-col items-center justify-center p-2 border-2 rounded-md shadow-l border-dark h-36 w-100"
+      className="shadow-l border-dark w-100 relative flex h-36 flex-col items-center justify-center rounded-md border-2 p-2"
     >
       <CommitCount
         commitCount={commitCount}
@@ -157,10 +157,10 @@ const RepoCard = ({
         background={background}
         linkData={linkData}
       />
-      <a className="flex items-center my-auto basis-2/4" {...linkData}>
-        <Icon className="w-16 h-16" />
+      <a className="my-auto flex basis-2/4 items-center" {...linkData}>
+        <Icon className="h-16 w-16" />
       </a>
-      <a className="font-mono text-xs basis-1/4 hover:underline" {...linkData}>
+      <a className="basis-1/4 font-mono text-xs hover:underline" {...linkData}>
         <span className="opacity-50">{org}/</span>
         {repo}
       </a>
@@ -188,7 +188,7 @@ const About = () => {
       id="Work"
       background="accent"
     >
-      <div className="grid grid-cols-2 grid-rows-2 gap-8 px-8 py-3 lg:grid-rows-1 lg:grid-cols-5 sm:grid-cols-3">
+      <div className="grid grid-cols-2 grid-rows-2 gap-8 px-8 py-3 sm:grid-cols-3 lg:grid-cols-5 lg:grid-rows-1">
         {OpenSource.map(({ key, ...openSourceData }) => (
           <RepoCard key={key} {...openSourceData} />
         ))}
