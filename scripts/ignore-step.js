@@ -5,12 +5,12 @@ const ABORT_BUILD_CODE = 0;
 const CONTINUE_BUILD_CODE = 1;
 
 const continueBuild = () => process.exit(CONTINUE_BUILD_CODE);
-const abordBuild = () => process.exit(ABORT_BUILD_CODE);
+const abortBuild = () => process.exit(ABORT_BUILD_CODE);
 
 const stepCheck = () => {
   const app = process.argv[2];
   if (!app) {
-    return abordBuild();
+    return abortBuild();
   }
 
   // get all file names changed in last commit
@@ -22,14 +22,17 @@ const stepCheck = () => {
 
   // check if any files in the app, or in the shared packages have changed
   const shouldBuild = fileNameList.some(
-    (file) => file.startsWith(`apps/${app}`) || file.startsWith("packages/")
+    (file) =>
+      file.startsWith(`apps/${app}`) ||
+      // prevent changes to storybook configuration files from triggering a build
+      (file.startsWith("packages/") && !file.startsWith("packages/storybook/"))
   );
 
   if (shouldBuild) {
     return continueBuild();
   }
 
-  return abordBuild();
+  return abortBuild();
 };
 
 stepCheck();
