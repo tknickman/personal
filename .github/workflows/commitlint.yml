@@ -1,2 +1,11 @@
-- name: Commit Linter
-  uses: wagoid/commitlint-github-action@v2.0.3
+name: Commit Linter
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
