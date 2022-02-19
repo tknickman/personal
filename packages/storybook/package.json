@@ -1,22 +1,25 @@
 {
   "name": "storybook",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
   "private": true,
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "export": "build-storybook",
+    "clean": "rm -rf storybook-static",
+    "chromatic": "npx chromatic"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
-    "babel-loader": "^8.2.3"
-  },
-  "dependencies": {},
-  "scripts": {
-    "start": "start-storybook -p 6006",
-    "export": "build-storybook"
+    "babel-loader": "^8.2.3",
+    "chromatic": "^6.4.3",
+    "storybook-dark-mode": "^1.0.9",
+    "tailwindcss": "^3.0.23"
   }
 }

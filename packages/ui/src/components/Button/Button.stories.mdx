@@ -1,9 +1,31 @@
 import { Meta, Story } from "@storybook/addon-docs";
+import colors from "tailwindcss/colors";
 
 import Button from ".";
 
-<Meta title="@tek/ui" component={Button} />
+<Meta
+  title="@tek/ui"
+  component={Button}
+  argTypes={{
+    onClick: { action: "clicked" },
+  }}
+/>
 
-export const Template = (args) => <Button {...args}>Button</Button>;
+export const Template = (args) => <Button {...args} />;
 
-<Story name="Button">{Template.bind({})}</Story>
+# Button example!
+
+<Story name="Button" args={{ children: "Button", className: "bg-gray-100" }}>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Branded Button"
+  args={{
+    children: "Button",
+    className:
+      "bg-emerald-600 ring-emerald-600 ring-offset-white text-white dark:ring-offset-gray-700",
+  }}
+>
+  {Template.bind({})}
+</Story>

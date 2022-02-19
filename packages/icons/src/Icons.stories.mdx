@@ -6,9 +6,11 @@ import { All_ICONS, CodePen } from ".";
 <Meta title="@tek/icons" component={Icon} />
 
 export const Template = (args) => (
-  <div>
-    {All_ICONS.map((I) => (
-      <I key={Icon.name} {...args} />
+  <div className="grid grid-cols-10 gap-4">
+    {All_ICONS.map((I, idx) => (
+      <div>
+        <I key={idx} {...args} />
+      </div>
     ))}
   </div>
 );
