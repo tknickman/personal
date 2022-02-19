@@ -19,14 +19,15 @@ Written in [typescript](https://www.typescriptlang.org) using [react](https://re
 
 ## Packages
 
-| ID  | App                                            | Description                                                                                     |
-| --- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| 1.  | [`@tek/jest-config`](packages/config)          | Base jest configuration from which other `jest.config.ts` configurations extend.                |
-| 2.  | [`@tek/eslint-config`](packages/eslint-config) | Base eslint configuration from which all other `eslintrc.js` configurations extend.             |
-| 3.  | [`@tek/ts-config`](packages/tsconfig)          | Base typescript configuration from which all other `tsconfig.json` configurations inherit from. |
-| 4.  | [`@tek/ui`](packages/ui)                       | Collection of shared UI components                                                              |
-| 5.  | [`@tek/icons`](packages/icons)                 | Collection of shared icons                                                                      |
-| 6.  | [`@tek/utils`](packages/utils)                 | Collection of shared utilities.                                                                 |
+| ID  | App                                            | Description                                                                                      |
+| --- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 1.  | [`@tek/jest-config`](packages/config)          | Base jest configuration from which other `jest.config.ts` configurations extend.                 |
+| 2.  | [`@tek/eslint-config`](packages/eslint-config) | Base eslint configuration from which all other `eslintrc.js` configurations extend.              |
+| 3.  | [`@tek/ts-config`](packages/tsconfig)          | Base typescript configuration from which all other `tsconfig.json` configurations inherit from.  |
+| 4.  | [`@tek/ui`](packages/ui)                       | Collection of shared UI components                                                               |
+| 5.  | [`@tek/icons`](packages/icons)                 | Collection of shared icons                                                                       |
+| 6.  | [`@tek/utils`](packages/utils)                 | Collection of shared utilities.                                                                  |
+| 6.  | [`@tek/storybook`](packages/storybook)         | Consolidated storybook. Renders all \*.stories files and publishes to chromatic for visual diffs |
 
 ## Domains
 
