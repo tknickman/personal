@@ -1,5 +1,5 @@
 name: Commit Linter
-on: [pull_request]
+on: [push]
 
 jobs:
   commitlint:
