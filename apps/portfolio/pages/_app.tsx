@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import { ThemeContext } from "@tek/ui";
 import { AppProps } from "next/app";
+import smoothscroll from "smoothscroll-polyfill";
 import colors from "tailwindcss/colors";
 
 import "../styles/index.css";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+const PortfolioApp = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, []);
+
   return (
     <ThemeContext
       toggleConfig={{
@@ -17,4 +23,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </div>
     </ThemeContext>
   );
-}
+};
+
+export default PortfolioApp;

@@ -3,10 +3,19 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useCompany } from "../../contexts/Company";
 import clsx from "clsx";
 
-const DividerPoly = ({ start, end }: { start: number; end: number }) => {
+type DividerProps = {
+  start: number;
+  end: number;
+  orientation?: "up" | "down";
+};
+
+const DividerPoly = ({ start, end, orientation }: DividerProps) => {
   const { company } = useCompany();
   return (
-    <svg viewBox="0 0 400 60">
+    <svg
+      viewBox="0 0 400 60"
+      className={clsx({ "rotate-180": orientation === "down" })}
+    >
       <motion.path
         initial={{
           fill: company.color,
@@ -19,10 +28,13 @@ const DividerPoly = ({ start, end }: { start: number; end: number }) => {
   );
 };
 
-const DividerCircle = ({ start, end }: { start: number; end: number }) => {
+const DividerCircle = ({ start, end, orientation }: DividerProps) => {
   const { company } = useCompany();
   return (
-    <svg viewBox="0 0 400 30">
+    <svg
+      viewBox="0 0 400 30"
+      className={clsx({ "rotate-180": orientation === "down" })}
+    >
       <motion.path
         initial={{
           fill: company.color,

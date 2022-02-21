@@ -1,28 +1,32 @@
 import { Meta, Story } from "@storybook/addon-docs";
 import colors from "tailwindcss/colors";
 
-import Button from ".";
+import Anchor from ".";
 
 <Meta
-  title="@tek/ui/button"
-  component={Button}
+  title="@tek/ui/anchor"
+  component={Anchor}
   argTypes={{
     onClick: { action: "clicked" },
   }}
 />
 
-export const Template = (args) => <Button {...args} />;
+export const Template = (args) => <Anchor {...args} />;
 
-# Button example!
+# Anchor example!
 
-<Story name="Default" args={{ children: "Button", className: "bg-gray-100" }}>
+<Story
+  name="Default"
+  args={{ children: "Anchor", className: "bg-gray-100", href: "#" }}
+>
   {Template.bind({})}
 </Story>
 
 <Story
   name="Branded"
   args={{
-    children: "Button",
+    children: "Anchor",
+    href: "#",
     className:
       "bg-emerald-600 ring-emerald-600 ring-offset-white text-white dark:ring-offset-gray-700",
   }}

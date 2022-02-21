@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import colors from "tailwindcss/colors";
-import { useCompany } from "../../contexts/Company";
+import { useCompany } from "../../../contexts/Company";
 
 type background = "default" | "accent";
 

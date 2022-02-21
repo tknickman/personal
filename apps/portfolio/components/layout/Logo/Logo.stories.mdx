@@ -1,0 +1,9 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Logo from ".";
+
+<Meta title="apps/portfolio/logo" component={Logo} />
+
+export const Template = (args) => <Logo {...args} />;
+
+<Story name="Default">{Template.bind({})}</Story>

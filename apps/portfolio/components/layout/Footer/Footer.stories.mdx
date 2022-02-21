@@ -1,0 +1,9 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Footer from ".";
+
+<Meta title="apps/portfolio/footer" component={Footer} />
+
+export const Template = (args) => <Footer {...args} />;
+
+<Story name="Default">{Template.bind({})}</Story>

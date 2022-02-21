@@ -56,7 +56,7 @@ const Hero = () => {
   );
 
   return (
-    <div id="Landing" className="snap-start snap-always" ref={ref}>
+    <div id="Landing" className="relative snap-start snap-always" ref={ref}>
       <a className="absolute top-8 left-8" href="#">
         <Portfolio className="dark:text-gray-200" />
       </a>

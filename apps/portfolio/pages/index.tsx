@@ -1,8 +1,13 @@
 import { getAllPosts } from "../lib/api/posts";
-
 import { CompanyContext } from "../contexts/Company";
-
-import { Hero, About, Experience, Blog, Work } from "../components/sections";
+import {
+  Hero,
+  About,
+  Skills,
+  Work,
+  Blog,
+  OpenSource,
+} from "../components/sections";
 import {
   Header,
   Footer,
@@ -18,9 +23,11 @@ const Index = () => {
         <Header />
         <About />
         <DividerCircle start={4} end={0} />
-        <Experience />
-        <DividerPoly start={-4} end={0} />
         <Work />
+        <DividerPoly start={-4} end={0} orientation="down" />
+        <Skills />
+        <DividerPoly start={-4} end={0} />
+        <OpenSource />
         <DividerCircle start={4} end={0} />
         <Blog />
         <Footer />

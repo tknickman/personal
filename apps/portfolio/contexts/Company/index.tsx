@@ -1,11 +1,36 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import { useInterval } from "@tek/utils";
-import tailwind from "../tailwind.config";
+import tailwind from "../../tailwind.config";
 
-const context = createContext({});
+export type Company = {
+  name: string;
+  color: string;
+  text: string;
+  decoration: string;
+  border: string;
+  background: string;
+  fill: string;
+  adjectives: string[];
+  verb: string;
+};
+
+type CompanyContext = {
+  company: Company;
+  adjective: string;
+  setPaused: Dispatch<SetStateAction<boolean>>;
+  paused: boolean;
+};
 
 const ADJECTIVES = ["interesting", "fun", "creative", "innovative"];
-const items = [
+
+const items: Array<Company> = [
   {
     name: "SurveyMonkey",
     color: tailwind.theme.extend.colors.surveymonkey,
@@ -13,6 +38,7 @@ const items = [
     decoration: "decoration-surveymonkey",
     border: "border-surveymonkey",
     background: "bg-surveymonkey",
+    fill: "fill-surveymonkey",
     adjectives: ADJECTIVES,
     verb: "built",
   },
@@ -23,6 +49,7 @@ const items = [
     decoration: "decoration-underarmour",
     border: "border-underarmour",
     background: "bg-underarmour",
+    fill: "fill-underarmour",
     adjectives: ADJECTIVES,
     verb: "built",
   },
@@ -33,10 +60,20 @@ const items = [
     decoration: "decoration-momentive",
     border: "border-momentive",
     background: "bg-momentive",
+    fill: "fill-momentive",
     adjectives: ADJECTIVES,
     verb: "build",
   },
 ];
+
+export const defaultState = {
+  company: items[0],
+  adjective: ADJECTIVES[0],
+  setPaused: () => {},
+  paused: false,
+};
+
+const context = createContext<CompanyContext>(defaultState);
 
 const { Provider, Consumer } = context;
 
@@ -55,10 +92,12 @@ const CompanyContext = ({ children }: { children: ReactNode }) => {
   }, 3500);
 
   const company = items[idx];
-  const adj = company.adjectives[adjIdx];
+  const adjective = company.adjectives[adjIdx];
 
   return (
-    <Provider value={{ company, adj, setPaused, paused }}>{children}</Provider>
+    <Provider value={{ company, adjective, setPaused, paused }}>
+      {children}
+    </Provider>
   );
 };
 
