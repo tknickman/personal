@@ -18,49 +18,9 @@
   "devDependencies": {
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
-    "turbo": "^1.0.25"
+    "turbo": "^1.1.3"
   },
-  "turbo": {
-    "baseBranch": "origin/main",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "dist/**",
-          ".next/**",
-          "public/dist/**"
-        ]
-      },
-      "test": {
-        "outputs": [
-          "coverage/**"
-        ],
-        "dependsOn": [
-          "^build"
-        ]
-      },
-      "export": {
-        "outputs": [
-          "out/**"
-        ],
-        "dependsOn": [
-          "^build",
-          "build"
-        ]
-      },
-      "lint": {
-        "outputs": []
-      },
-      "dev": {
-        "cache": false
-      },
-      "clean": {
-        "cache": false
-      }
-    }
-  },
+  "packageManager": "yarn@1.22.17",
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
