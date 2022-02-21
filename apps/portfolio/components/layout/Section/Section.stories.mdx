@@ -1,0 +1,30 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import Section from ".";
+
+<Meta title="apps/portfolio/section" component={Section} />
+
+export const Template = (args) => <Section {...args} />;
+
+<Story
+  name="Default"
+  args={{
+    titleSolid: "Title",
+    number: 1,
+    children: "Cool",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+<Story
+  name="Center"
+  args={{
+    titleSolid: "Title",
+    number: 2,
+    children: "Cool",
+    align: "center",
+  }}
+>
+  {Template.bind({})}
+</Story>

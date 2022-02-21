@@ -10,7 +10,7 @@ export const useSticky = <T extends Element>(): [
   const set = () => {
     const bounds = ref.current?.getBoundingClientRect();
     if (bounds) {
-      if (bounds.top <= 0) {
+      if (Math.floor(bounds.top) <= 0) {
         setIsSticky(true);
       } else {
         setIsSticky(false);

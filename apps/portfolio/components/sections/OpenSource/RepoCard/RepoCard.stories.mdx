@@ -1,0 +1,16 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import RepoCard from ".";
+import { OpenSourceData } from "../constants";
+
+<Meta title="apps/portfolio/repo card" component={RepoCard} />
+
+export const Template = (args) => (
+  <div className="mx-auto">
+    <RepoCard {...args} />
+  </div>
+);
+
+<Story name="Default" args={OpenSourceData[3]}>
+  {Template.bind({})}
+</Story>

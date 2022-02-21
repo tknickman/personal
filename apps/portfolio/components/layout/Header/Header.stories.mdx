@@ -1,0 +1,14 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { ThemeContext } from "@tek/ui";
+
+import Header from ".";
+
+<Meta title="apps/portfolio/header" component={Header} />
+
+export const Template = (args) => (
+  <ThemeContext>
+    <Header {...args} />
+  </ThemeContext>
+);
+
+<Story name="Default">{Template.bind({})}</Story>
