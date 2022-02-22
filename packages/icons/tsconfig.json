@@ -1,5 +1,5 @@
 {
-  "extends": "@tek/tsconfig/react-library.json",
+  "extends": "@tek/ts-config/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -16,9 +16,9 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@tek/config": "*",
+    "@tek/jest-config": "*",
     "@tek/eslint-config": "*",
-    "@tek/tsconfig": "*",
+    "@tek/ts-config": "*",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "tsup": "^5.10.1",
