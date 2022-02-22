@@ -4,4 +4,4 @@
 
 ---
 
-[![storybook](../../assets/storybook.svg)](https://main--620ef7b8f033a3003ae80b66.chromatic.com)
+[![storybook](../../assets/storybook.svg)](https://main--621506f0eca141003a5cc64a.chromatic.com)
