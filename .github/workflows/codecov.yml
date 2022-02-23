@@ -23,6 +23,7 @@ jobs:
           flags: app
           name: App Coverage
           verbose: true
+          token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload package coverage
         uses: codecov/codecov-action@v2
@@ -32,3 +33,4 @@ jobs:
           flags: package
           name: Package Coverage
           verbose: true
+          token: ${{ secrets.CODECOV_TOKEN }}
