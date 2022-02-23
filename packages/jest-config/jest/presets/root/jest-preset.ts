@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from "@jest/types";
+
+const rootConfig: Config.InitialOptions = {
   transform: {
     ".(ts|tsx)$": "ts-jest",
     ".(js|jsx)$": "babel-jest", // jest's default
@@ -14,3 +16,5 @@ module.exports = {
   },
   moduleDirectories: ["node_modules"],
 };
+
+export default rootConfig;
