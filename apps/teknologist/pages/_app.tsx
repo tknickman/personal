@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
     >
       <Head>
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
