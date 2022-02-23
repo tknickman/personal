@@ -5,8 +5,7 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ["@tek/jest-config/dist/configs/jest.setup.js"],
-  testEnvironment: "jest-environment-jsdom",
+  preset: "@tek/jest-config/dist/presets/next",
 };
 
-module.exports = createJestConfig(customJestConfig);
+export default createJestConfig(customJestConfig);

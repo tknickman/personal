@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf .turbo && rm -rf dist/ && rm -rf node_modules"
+    "clean": "rm -rf .turbo && rm -rf dist/ && rm -rf node_modules && rm -rf coverage"
   },
   "bin": {
     "jest": "./node_modules/.bin/jest"
@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
+    "babel-jest": "^27.5.1",
     "jest": "^27.4.5",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.5.0",

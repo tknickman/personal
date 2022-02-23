@@ -5,7 +5,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "export": "build-storybook",
-    "clean": "rm -rf storybook-static",
+    "clean": "rm -rf storybook-static && rm -rf node_modules && rm -rf coverage",
     "chromatic": "npx chromatic"
   },
   "devDependencies": {

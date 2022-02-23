@@ -9,7 +9,7 @@
     "start": "next start",
     "test": "jest",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf ./out"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf ./out && rm -rf coverage"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
