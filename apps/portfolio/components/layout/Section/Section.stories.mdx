@@ -2,7 +2,11 @@ import { Meta, Story } from "@storybook/addon-docs";
 
 import Section from ".";
 
-<Meta title="apps/portfolio/section" component={Section} />
+<Meta
+  title="apps/portfolio/section"
+  component={Section}
+  parameters={{ chomatic: { delay: 500 } }}
+/>
 
 export const Template = (args) => <Section {...args} />;
 
