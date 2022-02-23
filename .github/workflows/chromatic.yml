@@ -3,7 +3,7 @@ name: "Chromatic"
 on: push
 
 jobs:
-  chromatic-deployment:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:

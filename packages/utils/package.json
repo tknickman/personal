@@ -14,12 +14,12 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint src --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
   },
   "devDependencies": {
-    "@tek/config": "*",
     "@tek/eslint-config": "*",
-    "@tek/tsconfig": "*",
+    "@tek/jest-config": "*",
+    "@tek/ts-config": "*",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "tsup": "^5.10.1",
@@ -29,8 +29,5 @@
     "fathom-client": "^3.2.0",
     "next": "^12.0.7",
     "react": "^17.0.2"
-  },
-  "jest": {
-    "preset": "@tek/config/jest/presets/node"
   }
 }
