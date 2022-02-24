@@ -28,8 +28,8 @@ jobs:
   commitlint:
     needs: checkout
     steps:
-      name: commitlint
-      - uses: wagoid/commitlint-github-action@v4
+      - name: commitlint
+        uses: wagoid/commitlint-github-action@v4
 
   codecov:
     needs: test
