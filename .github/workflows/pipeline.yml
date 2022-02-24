@@ -11,27 +11,35 @@ jobs:
           fetch-depth: 0
 
   install:
-    - name: Install
-      run: yarn
-      needs: checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        run: yarn
+        needs: checkout
 
   build:
-    - name: build
-      run: yarn build
-      needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: yarn build
+        needs: install
 
   test:
-    - name: Test
-      run: yarn test
-      needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: yarn test
+        needs: build
 
   commitlint:
+    runs-on: ubuntu-latest
     needs: checkout
     steps:
       - name: commitlint
         uses: wagoid/commitlint-github-action@v4
 
   codecov:
+    runs-on: ubuntu-latest
     needs: test
     steps:
       - name: Upload app coverage
@@ -55,6 +63,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
   chromatic:
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Publish to Chromatic
