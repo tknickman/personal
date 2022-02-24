@@ -5,7 +5,7 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  preset: "@tek/jest-config/dist/presets/next",
+  preset: "@tek/jest-config/dist/presets/app-next",
 };
 
 export default createJestConfig(customJestConfig);

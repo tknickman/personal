@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const AWS = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="AWS" {...props}>
     <g>
       <path
         fill={fill(props, "#FF9900")}

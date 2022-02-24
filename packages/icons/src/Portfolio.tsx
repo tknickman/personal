@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Portfolio = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Portfolio" {...props}>
     <path
       fill={fill(props, "#5DD39E")}
       d="M28.146,8.172h1.137h1.752V6.419h-0.877H19.73H8.966v1.752H19.73v21.254v4.154h1.753V29.6

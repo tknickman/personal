@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Teknologist = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Teknologist" {...props}>
     <g>
       <polygon
         fill={fill(props, "#2C4251")}

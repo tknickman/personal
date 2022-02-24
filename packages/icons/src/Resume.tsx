@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Resume = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Resume" {...props}>
     <g>
       <rect
         fill={fill(props, "#ffffff")}

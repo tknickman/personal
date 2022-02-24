@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const TailwindCss = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="TailwindCss" {...props}>
     <g>
       <g>
         <path

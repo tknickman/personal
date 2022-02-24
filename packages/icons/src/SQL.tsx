@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const SQL = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="SQL" {...props}>
     <g>
       <path
         fill={fill(props, "#00B0D7")}

@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const StackOverflow = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="StackOverflow" {...props}>
     <g>
       <g>
         <polygon

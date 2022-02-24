@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const GitHub = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="GitHub" {...props}>
     <g>
       <g>
         <path

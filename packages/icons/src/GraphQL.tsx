@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const GraphQL = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="GraphQL" {...props}>
     <path
       fill={fill(props, "#E535AB")}
       d="M36.021,25.146c-0.145-0.082-0.293-0.15-0.443-0.212v-9.869c0.15-0.061,0.299-0.128,0.443-0.213

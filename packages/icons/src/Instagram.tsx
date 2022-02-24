@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Instagram = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Instagram" {...props}>
     <g>
       <g>
         <path

@@ -1,0 +1,22 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import colors from "tailwindcss/colors";
+
+import Avatar from ".";
+
+<Meta title="@tek/ui/avatar" component={Avatar} />
+
+export const Template = (args) => <Avatar {...args} />;
+
+<Story
+  name="Default"
+  args={{
+    profile: { name: "Thomas Knickman" },
+    image: {
+      src: "https://gravatar.com/avatar/0b61079d69a0faceb128b4b8637aa1d9",
+      alt: "Profile image",
+    },
+    href: "#",
+  }}
+>
+  {Template.bind({})}
+</Story>

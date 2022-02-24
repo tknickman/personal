@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const UnderArmour = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="UnderArmour" {...props}>
     <path
       fill={fill(props, "#D91A24")}
       d="M36.597,12.737v-0.478l-0.402-0.258c-0.125-0.08-3.146-1.991-8.585-3.084l-1.046-0.21v7.549
