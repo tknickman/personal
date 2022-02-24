@@ -12,24 +12,24 @@ jobs:
 
   install:
     runs-on: ubuntu-latest
+    needs: checkout
     steps:
       - name: Install
         run: yarn
-        needs: checkout
 
   build:
     runs-on: ubuntu-latest
+    needs: install
     steps:
       - name: build
         run: yarn build
-        needs: install
 
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Test
         run: yarn test
-        needs: build
 
   commitlint:
     runs-on: ubuntu-latest
