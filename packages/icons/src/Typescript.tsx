@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Typescript = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Typescript" {...props}>
     <g>
       <path
         fill={fill(props, "#2D79C7")}

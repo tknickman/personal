@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const TurboRepo = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="TurboRepo" {...props}>
     <g>
       <g>
         <path

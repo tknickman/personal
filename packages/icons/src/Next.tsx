@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Next = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Next" {...props}>
     <g>
       <path
         fill={fill(props, "#ffffff")}

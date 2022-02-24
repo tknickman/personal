@@ -9,8 +9,9 @@ const nodeConfig: Config.InitialOptions = {
   passWithNoTests: true,
   collectCoverage: true,
   setupFilesAfterEnv: ["@tek/jest-config/dist/configs/jest.setup.js"],
-  testEnvironment: "jest-environment-jsdom",
   coverageDirectory: "<rootDir>/coverage/",
+  testEnvironment: "jest-environment-jsdom",
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   modulePathIgnorePatterns: [
     "<rootDir>/test/__fixtures__",

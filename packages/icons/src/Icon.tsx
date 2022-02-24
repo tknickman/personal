@@ -5,9 +5,10 @@ export type IconProps = {
   className?: string;
   monochrome?: boolean;
   children?: ReactNode;
+  title?: string;
 };
 
-const Icon = ({ className, children }: IconProps) => (
+const Icon = ({ className, children, title }: IconProps) => (
   <svg
     className={clsx("fill-current", className)}
     version="1.1"
@@ -18,6 +19,7 @@ const Icon = ({ className, children }: IconProps) => (
     viewBox="0 0 40 40"
   >
     {children}
+    <title>{title}</title>
   </svg>
 );
 

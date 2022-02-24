@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const SurveyMonkey = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="SurveyMonkey" {...props}>
     <g>
       <path
         fill={fill(props, "#00BD70")}

@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const Momentive = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="Momentive" {...props}>
     <g>
       <path
         fill={fill(props, "#008500")}

@@ -2,7 +2,7 @@ import Icon, { IconProps } from "./Icon";
 import { fill } from "./helpers";
 
 const React = (props: IconProps) => (
-  <Icon {...props}>
+  <Icon title="React" {...props}>
     <g>
       <circle fill={fill(props, "#61DBFB")} cx="19.992" cy="19.995" r="2.629" />
       <path
