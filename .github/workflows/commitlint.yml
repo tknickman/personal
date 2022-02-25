@@ -1,4 +1,5 @@
 name: Commit Linter
+
 on: [push]
 
 jobs:
