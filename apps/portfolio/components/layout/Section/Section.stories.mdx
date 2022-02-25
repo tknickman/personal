@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/addon-docs";
+import isChromatic from "chromatic/isChromatic";
 
 import Section from ".";
 
@@ -8,7 +9,7 @@ import Section from ".";
   parameters={{ chomatic: { delay: 500 } }}
 />
 
-export const Template = (args) => <Section {...args} />;
+export const Template = (args) => <Section {...args} animate={!isChromatic} />;
 
 <Story
   name="Default"
