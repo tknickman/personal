@@ -1,21 +1,27 @@
 name: "Chromatic"
 
-on: push
+on: [push]
 
 jobs:
-  deployment:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - name: Install dependencies
+      - name: Setup cache
+        uses: actions/setup-node@v3.0.0
+        with:
+          cache: "yarn"
+
+      - name: Install
         run: yarn
 
-      - name: Build dependencies
+      - name: Build
         run: yarn build
 
-      - name: Publish to Chromatic
+      - name: Publish
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

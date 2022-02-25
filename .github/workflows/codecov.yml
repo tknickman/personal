@@ -1,15 +1,21 @@
 name: "Codecov"
 
-on: push
+on: [push]
 
 jobs:
   upload:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - name: Install dependencies
+      - name: Setup cache
+        uses: actions/setup-node@v3.0.0
+        with:
+          cache: "yarn"
+
+      - name: Install
         run: yarn
 
       - name: Test
