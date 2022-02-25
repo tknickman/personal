@@ -6,7 +6,7 @@ import Section from ".";
 <Meta
   title="apps/portfolio/section"
   component={Section}
-  parameters={{ chomatic: { delay: 500 } }}
+  parameters={{ chomatic: { diffThreshold: 0.2 } }}
 />
 
 export const Template = (args) => <Section {...args} animate={!isChromatic} />;
