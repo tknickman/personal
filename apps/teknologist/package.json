@@ -16,6 +16,7 @@
     "@tek/utils": "*",
     "clsx": "^1.1.1",
     "fathom-client": "^3.2.0",
+    "logrocket": "^3.0.1",
     "next": "^12.1.0",
     "next-seo": "^5.1.0",
     "react": "^17.0.1",

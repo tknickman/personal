@@ -1,5 +1,6 @@
 // hooks
 export { default as useFathom } from "./hooks/useFathom";
+export { default as useLogRocket } from "./hooks/useLogRocket";
 export { default as useHostName } from "./hooks/useHostName";
 export { default as useDebug } from "./hooks/useDebug";
 export { default as useInterval } from "./hooks/useInterval";
