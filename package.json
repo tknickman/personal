@@ -20,7 +20,8 @@
     "export": "turbo run export",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "sync-versions": "syncpack fix-mismatches"
   },
   "workspaces": [
     "apps/*",

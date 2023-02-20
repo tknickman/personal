@@ -78,7 +78,7 @@ function RSVPs({ children }: { children: ReactNode }) {
     setRestrictions('')
   }
 
-  const onBlurConfirmModal = (_: boolean) => {
+  const onBlurConfirmModal = () => {
     if (submitState === 'unsubmitted') {
       setConfirmOpen(false)
     } else if (submitState === 'success') {
