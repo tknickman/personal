@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, MutableRefObject } from "react";
 
-// stup the default state for initital render on the server
+// setup the default state for initital render on the server
 const defaultState = {
   top: 0,
   bottom: 0,

@@ -1,10 +1,13 @@
 import { defineConfig, Options } from "tsup";
 
 export default defineConfig((options: Options) => ({
-  entry: ["src/index.tsx"],
-  format: ["cjs", "esm"],
+  entry: ["src/**/*.tsx"],
+  treeshake: true,
+  splitting: true,
+  format: ["esm"],
   external: ["react", "next", "fathom-client"],
   inject: ["react-shim.ts"],
   dts: true,
+  clean: true,
   ...options,
 }));

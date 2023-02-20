@@ -1,4 +1,4 @@
-import getDomains from "../getDomains";
+import getDomains from "../other/getDomains";
 
 describe("getDomains", () => {
   it("works as expected", () => {
