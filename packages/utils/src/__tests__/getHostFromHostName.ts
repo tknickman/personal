@@ -1,4 +1,4 @@
-import { default as getHostFromHostName } from "../getHostFromHostName";
+import { default as getHostFromHostName } from "../other/getHostFromHostName";
 
 describe("getHostFromHostName", () => {
   it("does not throw with an no arguments", () => {

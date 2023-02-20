@@ -1,35 +1,36 @@
 {
   "name": "@tek/icons",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "private": true,
-  "files": [
-    "dist/**"
-  ],
-  "scripts": {
-    "build": "tsup",
-    "test": "jest",
-    "dev": "tsup --watch",
-    "lint": "TIMING=1 eslint src --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
+  "dependencies": {
+    "clsx": "^1.2.0"
   },
   "devDependencies": {
     "@tek/eslint-config": "*",
     "@tek/jest-config": "*",
     "@tek/ts-config": "*",
-    "@types/react": "^17.0.13",
-    "@types/react-dom": "^17.0.8",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "ts-node": "^10.5.0",
-    "tsup": "^5.10.1",
-    "typescript": "^4.5.3"
+    "tsup": "^5.11.13",
+    "typescript": "^4.7.4"
   },
+  "files": [
+    "dist/**"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   },
-  "dependencies": {
-    "clsx": "^1.1.1"
-  }
+  "private": true,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest"
+  },
+  "sideEffects": false,
+  "types": "./dist/index.d.ts"
 }
