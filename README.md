@@ -16,10 +16,11 @@ Written in [typescript](https://www.typescriptlang.org) using [react](https://re
 | 3.  | [`portfolio`](apps/portfolio)     | 🏗      | Personal Portfolio                |
 | 4.  | [`share`](apps/share)             | ✅     | Public File Share                 |
 | 5.  | [`teknologist`](apps/teknologist) | ✅     | Consulting landing / contact page |
+| 6.  | [`wedding`](apps/wedding)         | ✅     | Personal Wedding RSVP page        |
 
 ## Packages
 
-| ID  | App                                            | Description                                                                                        |
+| ID  | Package                                        | Description                                                                                        |
 | --- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | 1.  | [`@tek/jest-config`](packages/jest-config)     | Base jest configuration from which other `jest.config.ts` configurations extend.                   |
 | 2.  | [`@tek/eslint-config`](packages/eslint-config) | Base eslint configuration from which all other `eslintrc.js` configurations extend.                |
@@ -33,21 +34,22 @@ Written in [typescript](https://www.typescriptlang.org) using [react](https://re
 
 See breakdown below for personal domains.
 
-| Domain                                                 | Directory                            | Description             | Hosted   |
-| ------------------------------------------------------ | ------------------------------------ | ----------------------- | -------- |
-| [tomk.info](https://www.tomk.info)                     | [apps/info](apps/info)               | My contact information  | Vercel   |
-| [tomk.contact](https://www.tomk.contact)               | [apps/info](apps/info)               | My contact information  | Vercel   |
-| [tomk.link](https://www.tomk.link)                     | [apps/share](apps/share)             | Public File Share       | AWS (S3) |
-| [tknickman.com](https://www.tknickman.com)             | [apps/info](apps/info)               | My contact information  | Vercel   |
-| [thomasknickman.com](https://www.thomasknickman.com)   | [apps/portfolio](apps/portfolio)     | Portfolio               | Vercel   |
-| [thomasknickman.info](https://www.thomasknickman.info) | [apps/portfolio](apps/portfolio)     | Portfolio               | Vercel   |
-| [thomasknickman.me](https://www.thomasknickman.me)     | [apps/portfolio](apps/portfolio)     | Portfolio               | Vercel   |
-| [teknologist.co](https://www.teknologist.co)           | [apps/teknologist](apps/teknologist) | Consulting landing page | Vercel   |
-| [teknologist.dev](https://www.teknologist.dev)         | [apps/teknologist](apps/teknologist) | Consulting landing page | Vercel   |
-| [teknologist.io](https://www.teknologist.io)           | [apps/teknologist](apps/teknologist) | Consulting landing page | Vercel   |
-| [simplevocab.com](https://www.simplevocab.com)         | [apps/parked](apps/parked)           | Parked domain           | Vercel   |
-| [uber2chipotle.com](https://www.uber2chipotle.com)     | [apps/parked](apps/parked)           | Parked domain           | Vercel   |
-| [atekdesign.com](https://www.atekdesign.com)           | [apps/parked](apps/parked)           | Parked domain           | Vercel   |
+| Domain                                                 | Directory                            | Description                | Hosted   |
+| ------------------------------------------------------ | ------------------------------------ | -------------------------- | -------- |
+| [tomk.info](https://www.tomk.info)                     | [apps/info](apps/info)               | My contact information     | Vercel   |
+| [tomk.contact](https://www.tomk.contact)               | [apps/info](apps/info)               | My contact information     | Vercel   |
+| [tomk.link](https://www.tomk.link)                     | [apps/share](apps/share)             | Public File Share          | AWS (S3) |
+| [tknickman.com](https://www.tknickman.com)             | [apps/info](apps/info)               | My contact information     | Vercel   |
+| [thomasknickman.com](https://www.thomasknickman.com)   | [apps/portfolio](apps/portfolio)     | Portfolio                  | Vercel   |
+| [thomasknickman.info](https://www.thomasknickman.info) | [apps/portfolio](apps/portfolio)     | Portfolio                  | Vercel   |
+| [thomasknickman.me](https://www.thomasknickman.me)     | [apps/portfolio](apps/portfolio)     | Portfolio                  | Vercel   |
+| [teknologist.co](https://www.teknologist.co)           | [apps/teknologist](apps/teknologist) | Consulting landing page    | Vercel   |
+| [teknologist.dev](https://www.teknologist.dev)         | [apps/teknologist](apps/teknologist) | Consulting landing page    | Vercel   |
+| [teknologist.io](https://www.teknologist.io)           | [apps/teknologist](apps/teknologist) | Consulting landing page    | Vercel   |
+| [simplevocab.com](https://www.simplevocab.com)         | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
+| [uber2chipotle.com](https://www.uber2chipotle.com)     | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
+| [atekdesign.com](https://www.atekdesign.com)           | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
+| [tomandsteph.wedding](https://www.tomandsteph.weddin)  | [apps/wedding](apps/wedding)         | Personal Wedding RSVP page | Vercel   |
 
 ---
 
