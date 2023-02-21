@@ -15,10 +15,7 @@ const sendZapierWebhook = async ({
   }
 
   try {
-    return axios.post(
-      ZAPIER_WEBOOK_URL,
-      rsvp
-    )
+    return axios.post(ZAPIER_WEBOOK_URL, rsvp)
   } catch (error) {
     console.log(error)
     return null
