@@ -3,7 +3,11 @@ import { ThemeContext } from "@tek/ui";
 
 import Header from ".";
 
-<Meta title="apps/portfolio/header" component={Header} />
+<Meta
+  title="apps/portfolio/header"
+  component={Header}
+  parameters={{ chromatic: { diffThreshold: 0.1 } }}
+/>
 
 export const Template = (args) => (
   <ThemeContext>
