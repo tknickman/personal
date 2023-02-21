@@ -85,7 +85,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </div>
       <div className="hidden">
-        <a rel="me" href="https://mastodon.social/@tknickman">Mastodon</a>
+        <a rel="me" href="https://mastodon.social/@tknickman">
+          Mastodon
+        </a>
       </div>
     </ThemeContext>
   );

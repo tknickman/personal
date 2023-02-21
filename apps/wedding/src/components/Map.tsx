@@ -3,7 +3,8 @@ import { GoogleMap, LoadScript, OverlayView } from '@react-google-maps/api'
 import { LocationMarkerIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 
-const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string
+const GOOGLE_MAPS_API_KEY = process.env
+  .NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string
 const GOOGLE_MAPS_MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID as string
 
 const libraries: (

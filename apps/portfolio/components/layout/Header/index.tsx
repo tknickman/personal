@@ -78,20 +78,20 @@ function Header({ layout = "main" }: { layout?: "main" | "blog" }) {
       ref={ref}
     >
       <nav
-        className="px-4 mx-auto text-white dark:text-dark max-w-7xl sm:px-6 lg:px-8 text-bold"
+        className="dark:text-dark text-bold mx-auto max-w-7xl px-4 text-white sm:px-6 lg:px-8"
         aria-label="Top"
       >
         <Popover>
-          <div className="flex items-center justify-between w-full py-2">
+          <div className="flex w-full items-center justify-between py-2">
             <Logo />
             <div className="ml-10 space-x-8 text-center lg:block">
               {/* desktop */}
               <DesktopMenu />
               {/* mobile button*/}
               <div className="md:hidden">
-                <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-light dark:text-dark dark:hover:text-gray-500 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-inset dark:focus:ring-dark focus:ring-light">
+                <Popover.Button className="text-light dark:text-dark dark:focus:ring-dark focus:ring-light inline-flex items-center justify-center rounded-md p-2 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-inset dark:hover:text-gray-500">
                   <span className="sr-only">Open menu</span>
-                  <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
@@ -109,7 +109,7 @@ function Header({ layout = "main" }: { layout?: "main" | "blog" }) {
           >
             <Popover.Panel
               focus
-              className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
+              className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
             >
               <MobileMenu company={company} />
             </Popover.Panel>
