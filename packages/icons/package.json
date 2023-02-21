@@ -2,18 +2,18 @@
   "name": "@tek/icons",
   "version": "1.0.0",
   "dependencies": {
-    "clsx": "^1.2.0"
+    "clsx": "1.2.0"
   },
   "devDependencies": {
     "@tek/eslint-config": "*",
     "@tek/jest-config": "*",
     "@tek/ts-config": "*",
-    "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "ts-node": "^10.5.0",
-    "tsup": "^5.11.13",
-    "typescript": "^4.7.4"
+    "@testing-library/react": "14.0.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "ts-node": "10.5.0",
+    "tsup": "5.11.13",
+    "typescript": "4.7.4"
   },
   "files": [
     "dist/**"
@@ -21,7 +21,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "18.2.0"
   },
   "private": true,
   "scripts": {

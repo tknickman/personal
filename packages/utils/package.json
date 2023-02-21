@@ -5,10 +5,10 @@
     "@tek/eslint-config": "*",
     "@tek/jest-config": "*",
     "@tek/ts-config": "*",
-    "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.0.28",
-    "tsup": "^5.11.13",
-    "typescript": "^4.7.4"
+    "@testing-library/react": "14.0.0",
+    "@types/react": "18.0.28",
+    "tsup": "5.11.13",
+    "typescript": "4.7.4"
   },
   "files": [
     "dist/**"
@@ -16,10 +16,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "peerDependencies": {
-    "fathom-client": "^3.5.0",
-    "logrocket": "^3.0.1",
-    "next": "^13.1.6",
-    "react": "^18.2.0"
+    "fathom-client": "3.5.0",
+    "logrocket": "3.0.1",
+    "next": "13.1.6",
+    "react": "18.2.0"
   },
   "private": true,
   "scripts": {

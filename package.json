@@ -2,9 +2,9 @@
   "name": "personal",
   "version": "1.0.0",
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "syncpack": "^9.7.4",
+    "prettier": "2.7.1",
+    "prettier-plugin-tailwindcss": "0.1.11",
+    "syncpack": "9.7.4",
     "turbo": "1.6.3"
   },
   "engines": {
@@ -20,8 +20,8 @@
     "export": "turbo run export",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "test": "turbo run test",
-    "sync-versions": "syncpack fix-mismatches"
+    "sync-versions": "syncpack fix-mismatches",
+    "test": "turbo run test"
   },
   "workspaces": [
     "apps/*",
