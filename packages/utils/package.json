@@ -1,34 +1,34 @@
 {
   "name": "@tek/utils",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "private": true,
-  "files": [
-    "dist/**"
-  ],
-  "scripts": {
-    "test": "jest",
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "lint": "TIMING=1 eslint src --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage"
-  },
   "devDependencies": {
     "@tek/eslint-config": "*",
     "@tek/jest-config": "*",
     "@tek/ts-config": "*",
-    "@types/react": "^17.0.13",
-    "@types/react-dom": "^17.0.8",
-    "tsup": "^5.10.1",
-    "typescript": "^4.5.3"
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.28",
+    "tsup": "^5.11.13",
+    "typescript": "^4.7.4"
   },
+  "files": [
+    "dist/**"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "peerDependencies": {
-    "fathom-client": "^3.2.0",
+    "fathom-client": "^3.5.0",
     "logrocket": "^3.0.1",
-    "next": "^12.0.7",
-    "react": "^17.0.2"
-  }
+    "next": "^13.1.6",
+    "react": "^18.2.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest"
+  },
+  "sideEffects": false,
+  "types": "./dist/index.d.ts"
 }

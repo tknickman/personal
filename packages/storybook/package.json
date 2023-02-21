@@ -1,13 +1,6 @@
 {
   "name": "storybook",
   "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "start-storybook -p 6006",
-    "export": "build-storybook",
-    "clean": "rm -rf storybook-static && rm -rf node_modules && rm -rf coverage",
-    "chromatic": "npx chromatic"
-  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@storybook/addon-actions": "^6.4.19",
@@ -20,6 +13,13 @@
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.1",
     "storybook-dark-mode": "^1.0.9",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.1.4"
+  },
+  "private": true,
+  "scripts": {
+    "chromatic": "npx chromatic",
+    "clean": "rm -rf storybook-static && rm -rf node_modules && rm -rf coverage",
+    "export": "build-storybook",
+    "start": "start-storybook -p 6006"
   }
 }

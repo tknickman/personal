@@ -8,6 +8,7 @@ export default function createMockRouter(
     pathname: "/",
     route: "/",
     query: {},
+    forward: jest.fn(),
     asPath: "/",
     back: jest.fn(),
     beforePopState: jest.fn(),
