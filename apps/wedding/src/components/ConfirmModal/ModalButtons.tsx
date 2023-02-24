@@ -68,7 +68,7 @@ const ModalButtons = ({
         ref={submitButtonRef}
       >
         {closed
-          ? `From closed ${ago} days ago`
+          ? `Form closed ${ago} days ago`
           : submitState === 'loading'
           ? 'Saving...'
           : 'Submit RSVP'}
