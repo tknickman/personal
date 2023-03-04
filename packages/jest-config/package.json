@@ -1,8 +1,10 @@
 {
   "name": "@tek/jest-config",
   "version": "1.0.0",
-  "bin": {
-    "jest": "./node_modules/.bin/jest"
+  "private": true,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf dist/ && rm -rf node_modules && rm -rf coverage"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -16,12 +18,10 @@
     "@types/jest": "^27.4.1",
     "tsup": "^5.11.13"
   },
+  "bin": {
+    "jest": "./node_modules/.bin/jest"
+  },
   "files": [
     "dist/"
-  ],
-  "private": true,
-  "scripts": {
-    "build": "tsup",
-    "clean": "rm -rf .turbo && rm -rf dist/ && rm -rf node_modules && rm -rf coverage"
-  }
+  ]
 }

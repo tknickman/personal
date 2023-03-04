@@ -1,0 +1,20 @@
+name: "Syncpack"
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  syncpack:
+    runs-on: ubuntu-latest
+    name: syncpack
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: JamieMason/syncpack-github-action@0.2.2
+        with:
+          package-manager: 'yarn'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
