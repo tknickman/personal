@@ -1,6 +1,15 @@
 {
   "name": "info",
   "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf coverage",
+    "dev": "next dev --port=3001",
+    "lint": "TIMING=1 next lint",
+    "start": "next start",
+    "test": "jest"
+  },
   "dependencies": {
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
@@ -23,19 +32,10 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.7",
-    "next-transpile-modules": "9.0.0",
+    "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.1.4",
     "ts-node": "^10.5.0",
     "typescript": "^4.7.4"
-  },
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf coverage",
-    "dev": "next dev --port=3001",
-    "lint": "TIMING=1 next lint",
-    "start": "next start",
-    "test": "jest"
   }
 }

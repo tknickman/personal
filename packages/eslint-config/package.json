@@ -1,8 +1,9 @@
 {
   "name": "@tek/eslint-config",
   "version": "1.0.0",
-  "bin": {
-    "eslint": "./node_modules/.bin/eslint"
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf coverage"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.16.5",
@@ -22,13 +23,12 @@
   "devDependencies": {
     "@types/eslint": "^8.2.1"
   },
+  "bin": {
+    "eslint": "./node_modules/.bin/eslint"
+  },
   "files": [
     "eslint-preset-next.js",
     "eslint-preset-react.js"
   ],
-  "main": "index.js",
-  "private": true,
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf coverage"
-  }
+  "main": "index.js"
 }

@@ -1,6 +1,14 @@
 {
   "name": "@tek/utils",
   "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest"
+  },
   "devDependencies": {
     "@tek/eslint-config": "*",
     "@tek/jest-config": "*",
@@ -20,14 +28,6 @@
     "logrocket": "^3.0.1",
     "next": "^13.1.6",
     "react": "^18.2.0"
-  },
-  "private": true,
-  "scripts": {
-    "build": "tsup",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
-    "dev": "tsup --watch",
-    "lint": "TIMING=1 eslint src --fix",
-    "test": "jest"
   },
   "sideEffects": false,
   "types": "./dist/index.d.ts"

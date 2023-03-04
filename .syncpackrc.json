@@ -1,5 +1,10 @@
 {
-  "customTypes": {},
+  "customTypes": {
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version"
+    }
+  },
   "dependencyTypes": [
     "dev",
     "overrides",
@@ -12,18 +17,27 @@
   "filter": ".",
   "indent": "  ",
   "semverGroups": [],
-  "semverRange": "",
+  "semverRange": "^",
   "sortAz": [
     "contributors",
     "keywords",
-    "scripts",
     "dependencies",
     "devDependencies",
     "peerDependencies",
-    "resolutions"
-    
+    "resolutions",
+    "workspaces"
   ],
-  "sortFirst": ["name", "description", "version", "author"],
+  "sortFirst": [
+    "name",
+    "version",
+    "description",
+    "author",
+    "private",
+    "workspaces",
+    "scripts",
+    "dependencies",
+    "devDependencies"
+  ],
   "source": ["package.json", "packages/*/package.json", "apps/*/package.json"],
   "versionGroups": []
 }
