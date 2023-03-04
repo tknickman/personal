@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import { ThemeContext } from "@tek/ui";
+import { Analytics } from "@vercel/analytics/react";
 import { AppProps } from "next/app";
 import smoothscroll from "smoothscroll-polyfill";
 import colors from "tailwindcss/colors";
+
+import { ThemeContext } from "@tek/ui";
 
 import "../styles/index.css";
 
@@ -12,6 +14,7 @@ const PortfolioApp = ({ Component, pageProps }: AppProps) => {
   }, []);
 
   return (
+    <>
     <ThemeContext
       toggleConfig={{
         moonColor: colors.gray["800"],
@@ -22,6 +25,8 @@ const PortfolioApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </div>
     </ThemeContext>
+    <Analytics />
+    </>
   );
 };
 
