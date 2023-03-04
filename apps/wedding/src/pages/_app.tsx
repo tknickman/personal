@@ -1,8 +1,11 @@
 import 'focus-visible'
 import '@/styles/tailwind.css'
+import { Analytics } from '@vercel/analytics/react'
 import { AppProps } from 'next/app'
 import RSVPs from '@/contexts/RSVP'
 import SectionContext from '@/contexts/Location'
+
+// internal
 import { getDomains, useFathom, useLogRocket } from '@tek/utils'
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS
@@ -18,11 +21,14 @@ export default function App({ Component, pageProps }: AppProps) {
   useLogRocket(logRocketSiteId as string)
 
   return (
-    <SectionContext>
-      <RSVPs>
-        <Component {...pageProps} />
-      </RSVPs>
-    </SectionContext>
+    <>
+      <SectionContext>
+        <RSVPs>
+          <Component {...pageProps} />
+        </RSVPs>
+      </SectionContext>
+      <Analytics />
+    </>
   )
 }
 
