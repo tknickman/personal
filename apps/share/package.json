@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "@tek/ui": "*",
-    "@tek/utils": "*",
+    "@tek/ui": "workspace:*",
+    "@tek/utils": "workspace:*",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.0",
     "fathom-client": "^3.5.0",
@@ -24,9 +24,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tek/eslint-config": "*",
-    "@tek/jest-config": "*",
-    "@tek/ts-config": "*",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.7",

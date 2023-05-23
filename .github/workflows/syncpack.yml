@@ -15,6 +15,6 @@ jobs:
           node-version: 16
       - uses: JamieMason/syncpack-github-action@0.2.2
         with:
-          package-manager: 'yarn'
+          package-manager: 'pnpm'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

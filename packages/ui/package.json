@@ -14,9 +14,9 @@
     "react-toggle-dark-mode": "^1.0.4"
   },
   "devDependencies": {
-    "@tek/eslint-config": "*",
-    "@tek/jest-config": "*",
-    "@tek/ts-config": "*",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

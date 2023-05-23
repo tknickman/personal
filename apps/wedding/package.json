@@ -18,7 +18,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
-    "@tek/utils": "*",
+    "@tek/utils": "workspace:*",
     "@types/uuid": "^8.3.4",
     "@vercel/analytics": "^0.1.11",
     "autoprefixer": "^10.4.7",
@@ -37,9 +37,9 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@tek/eslint-config": "*",
-    "@tek/jest-config": "*",
-    "@tek/ts-config": "*",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
