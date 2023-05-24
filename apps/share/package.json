@@ -28,6 +28,7 @@
     "@tek/jest-config": "workspace:*",
     "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.6",
