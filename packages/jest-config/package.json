@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@jest/types": "^29.5.0",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^29.5.1",
     "tsup": "^5.11.13"
   },
   "bin": {
