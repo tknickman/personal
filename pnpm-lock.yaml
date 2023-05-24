@@ -773,6 +773,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
+      '@jest/types':
+        specifier: ^29.5.0
+        version: 29.5.0
       '@tek/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config

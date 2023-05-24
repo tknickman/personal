@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@jest/types": "^29.5.0",
     "@tek/eslint-config": "workspace:*",
     "@tek/jest-config": "workspace:*",
     "@tek/ts-config": "workspace:*",
