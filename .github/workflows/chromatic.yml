@@ -21,10 +21,10 @@ jobs:
         uses: actions/setup-node@v3.0.0
         with:
           node-version: 16
-          cache: "pnpm install"
+          cache: "pnpm"
 
       - name: Install
-        run: pnpm
+        run: pnpm install
 
       - name: Build
         run: pnpm build
