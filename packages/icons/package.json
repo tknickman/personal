@@ -18,6 +18,7 @@
     "@tek/jest-config": "workspace:*",
     "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "ts-node": "^10.5.0",
