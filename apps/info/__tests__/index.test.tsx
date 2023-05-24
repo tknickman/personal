@@ -3,8 +3,10 @@ import { createMockRouter } from "@tek/utils";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import Home from "../pages/index";
 
-describe("Home", () => {
+describe("home", () => {
   it("renders page heading", () => {
+    expect.assertions(1);
+    
     render(
       <RouterContext.Provider value={createMockRouter({ query: {} })}>
         <Home hoverColor="red" selectedItem={null} setSelectedItem={() => {}} />

@@ -14,6 +14,7 @@
     "@tek/jest-config": "workspace:*",
     "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^27.4.1",
     "@types/react": "^18.0.28",
     "tsup": "^5.11.13",
     "typescript": "^4.7.4"
@@ -25,6 +26,7 @@
   "module": "./dist/index.mjs",
   "peerDependencies": {
     "fathom-client": "^3.5.0",
+    "jest": "^27.4.5",
     "logrocket": "^3.0.1",
     "next": "^13.1.6",
     "react": "^18.2.0"
