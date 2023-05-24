@@ -49,7 +49,7 @@ See breakdown below for personal domains.
 | [simplevocab.com](https://www.simplevocab.com)         | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
 | [uber2chipotle.com](https://www.uber2chipotle.com)     | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
 | [atekdesign.com](https://www.atekdesign.com)           | [apps/parked](apps/parked)           | Parked domain              | Vercel   |
-| [tomandsteph.wedding](https://www.tomandsteph.wedding)  | [apps/wedding](apps/wedding)         | Personal Wedding RSVP page | Vercel   |
+| [tomandsteph.wedding](https://www.tomandsteph.wedding) | [apps/wedding](apps/wedding)         | Personal Wedding RSVP page | Vercel   |
 
 ---
 

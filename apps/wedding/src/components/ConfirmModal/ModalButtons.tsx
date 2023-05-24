@@ -61,7 +61,7 @@ const ModalButtons = ({
           {
             'cursor-not-allowed opacity-75': submitState === 'loading',
             'hover:opacity-75': submitState !== 'loading',
-            'opacity-75 cursor-not-allowed': closed,
+            'cursor-not-allowed opacity-75': closed,
           }
         )}
         onClick={onConfirm}

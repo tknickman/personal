@@ -6,7 +6,7 @@ import Home from "../pages/index";
 describe("home", () => {
   it("renders page heading", () => {
     expect.assertions(1);
-    
+
     render(
       <RouterContext.Provider value={createMockRouter({ query: {} })}>
         <Home hoverColor="red" selectedItem={null} setSelectedItem={() => {}} />

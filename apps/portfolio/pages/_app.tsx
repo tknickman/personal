@@ -15,17 +15,17 @@ const PortfolioApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-    <ThemeContext
-      toggleConfig={{
-        moonColor: colors.gray["800"],
-        sunColor: "white",
-      }}
-    >
-      <div className="bg-light dark:bg-dark">
-        <Component {...pageProps} />
-      </div>
-    </ThemeContext>
-    <Analytics />
+      <ThemeContext
+        toggleConfig={{
+          moonColor: colors.gray["800"],
+          sunColor: "white",
+        }}
+      >
+        <div className="bg-light dark:bg-dark">
+          <Component {...pageProps} />
+        </div>
+      </ThemeContext>
+      <Analytics />
     </>
   );
 };

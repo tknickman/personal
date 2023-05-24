@@ -6,7 +6,7 @@ import { NextSeo } from "next-seo";
 import { trackGoal } from "fathom-client";
 import Head from "next/head";
 
-// internal 
+// internal
 import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { useHostName, useFathom, getDomains } from "@tek/utils";
 
