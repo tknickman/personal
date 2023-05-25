@@ -2,6 +2,9 @@
   "name": "@tek/icons",
   "version": "1.0.0",
   "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
@@ -21,18 +24,16 @@
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "ts-node": "^10.5.0",
+    "@types/testing-library__jest-dom": "^5.14.6",
+    "ts-node": "^10.9.1",
     "tsup": "^5.11.13",
-    "typescript": "^4.7.4"
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "files": [
     "dist/**"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "sideEffects": false,
-  "types": "./dist/index.d.ts"
+  "sideEffects": false
 }
