@@ -7,7 +7,7 @@ import Home from '../src/pages/index'
 
 describe('home', () => {
   it('renders page heading', () => {
-    expect.assertions(1)
+    expect.assertions(2)
     render(
       <RouterContext.Provider value={createMockRouter({ query: {} })}>
         <SectionContext>

@@ -3,9 +3,16 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ES6",
-    "jsx": "react-jsx",
-    "moduleResolution": "node"
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "jsx": "react-jsx"
   }
 }
