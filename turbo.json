@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.org/schema.json",
+  "globalEnv": ["VERCEL_ENV"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -13,11 +14,10 @@
       "outputs": ["out/**"],
       "dependsOn": ["^build", "build"]
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "clean": {
       "cache": false
