@@ -20,7 +20,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
-    "tsup": "^5.11.13",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
