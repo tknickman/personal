@@ -1,5 +1,4 @@
 import ConfirmModal from '@/components/ConfirmModal'
-import LogRocket from 'logrocket'
 import { trackGoal } from 'fathom-client'
 import fathomGoals from '@/lib/fathomGoals'
 import axios from 'axios'
@@ -149,25 +148,6 @@ function RSVPs({ children }: { children: ReactNode }) {
   const handleConfirmModalClose = () => {
     trackGoal(fathomGoals.RSVPGoBack, 0)
     if (submitState === 'success') {
-      try {
-        LogRocket.identify(
-          `${firstName.toLowerCase()}${lastName.toLowerCase()}`,
-          {
-            name: `${firstName} ${lastName}`,
-            email: email || '',
-            isAttending,
-            firstName,
-            lastName,
-            dinner: dinner?.id || '',
-            hasDietaryRestrictions,
-            restrictions: restrictions || '',
-            groupId: GROUP_ID,
-          }
-        )
-      } catch (e) {
-        console.log('could not identify logrocket user', e)
-      }
-
       onResetRsvp()
     }
     setConfirmOpen(false)
