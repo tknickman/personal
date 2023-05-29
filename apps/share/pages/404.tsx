@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
 import { Anchor } from "@tek/ui";
@@ -21,11 +20,12 @@ export default function FourOhFour() {
               </p>
             </div>
             <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-              <Link href="/" passHref>
-                <Anchor className="bg-primary-600 ring-primary-600 ring-offset-light dark:ring-offset-dark text-white">
-                  Home
-                </Anchor>
-              </Link>
+              <Anchor
+                href="/"
+                className="bg-primary-600 ring-primary-600 ring-offset-light dark:ring-offset-dark text-white"
+              >
+                Home
+              </Anchor>
               <Anchor
                 onClick={() => trackGoal(goals.contactClick, 0)}
                 href="https://www.tomk.info?ref=apps/share"
