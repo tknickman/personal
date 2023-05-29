@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 // internal
 import { DarkModeToggle, ThemeContext } from "@tek/ui";
-import { useFathom, getDomains, useLogRocket } from "@tek/utils";
+import { useFathom, getDomains } from "@tek/utils";
 
 // configs
 import tailwind from "../tailwind.config";
@@ -17,11 +17,9 @@ import goals from "../lib/fathomGoals";
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
-const logRocketSiteId = process.env.NEXT_PUBLIC_LOG_ROCKET_SITE_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useLogRocket(logRocketSiteId as string);
   useFathom(fathomSiteId as string, {
     url: fathomUrl,
     includedDomains: getDomains({ hostnames }),

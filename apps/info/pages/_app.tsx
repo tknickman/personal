@@ -9,7 +9,7 @@ import { trackGoal } from "fathom-client";
 
 // internal
 import { DarkModeToggle, ThemeContext } from "@tek/ui";
-import { getDomains, useFathom, useLogRocket } from "@tek/utils";
+import { getDomains, useFathom } from "@tek/utils";
 
 import goals from "../lib/fathomGoals";
 import tailwind from "../tailwind.config";
@@ -18,11 +18,9 @@ import { LinkItem } from "../config";
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS;
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID;
-const logRocketSiteId = process.env.NEXT_PUBLIC_LOG_ROCKET_SITE_ID;
 const fathomUrl = process.env.NEXT_PUBLIC_FATHOM_TRACKING_URL;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useLogRocket(logRocketSiteId as string);
   useFathom(fathomSiteId as string, {
     url: fathomUrl,
     includedDomains: getDomains({ hostnames }),

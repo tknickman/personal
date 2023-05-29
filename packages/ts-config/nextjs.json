@@ -8,6 +8,8 @@
     "allowJs": true,
     "skipLibCheck": true,
     "noEmit": true,
+    "declarationMap": false,
+    "declaration": false,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
