@@ -50,7 +50,7 @@ export default function Home() {
               <div className="mt-8">
                 <Button
                   onClick={onContact}
-                  className="bg-primary dark:hover:ring-offset-primary text-white hover:ring-offset-white"
+                  className="bg-primary dark:bg-accent hover:ring-accent dark:hover:ring-offset-primary text-white hover:ring-offset-white"
                 >
                   <MailIcon className="mr-3 -ml-1 h-5 w-5" aria-hidden="true" />
                   Get in touch!

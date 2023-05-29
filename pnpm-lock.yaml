@@ -19,6 +19,9 @@ importers:
 
   apps/info:
     dependencies:
+      '@calcom/embed-react':
+        specifier: ^1.1.1
+        version: 1.1.1(react-dom@18.2.0)(react@18.2.0)
       '@headlessui/react':
         specifier: ^1.6.5
         version: 1.7.11(react-dom@18.2.0)(react@18.2.0)
@@ -3406,6 +3409,28 @@ packages:
 
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  /@calcom/embed-core@1.2.1:
+    resolution: {integrity: sha512-KDL1gjWiixDmaLRT/Ps7Y2MgXfe1NPkVr9UG/VkkJnIVxBz8M0tLBdGTRZpLzwVpsN7VsK/Wb1p9dZ8SYTKitw==}
+    dev: false
+
+  /@calcom/embed-react@1.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-K27CYyrHKzkc7kWNhLnrZPh0+uJy2VAab9Z8e6jKylYNWBraiAb9zyx8hOFcAMpHHOHXb1XBN76HLm3Ug7Js3A==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@calcom/embed-core': 1.2.1
+      '@calcom/embed-snippet': 1.0.9
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@calcom/embed-snippet@1.0.9:
+    resolution: {integrity: sha512-x8/RZxYUQ3uPZButjHWiZ5Kz00+Y9v+NK2XEklnKC2JslDEzRU+KV/g8Lk5aF/xweHSioKwVLa5xBmrfR9deKg==}
+    dependencies:
+      '@calcom/embed-core': 1.2.1
+    dev: false
 
   /@cnakazawa/watch@1.0.4:
     resolution: {integrity: sha512-v9kIhKwjeZThiWrLmj0y17CWoyddASLj9O2yvbZkbvw/N3rWOYy9zkV66ursAoVr0mV15bL8g0c4QZUE6cdDoQ==}
