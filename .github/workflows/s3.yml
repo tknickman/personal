@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm export
+        run: pnpm export --filter=share
 
       - name: Deploy
         uses: reggionick/s3-deploy@v3
