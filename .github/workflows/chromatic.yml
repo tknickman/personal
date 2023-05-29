@@ -14,17 +14,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Setup node
         uses: actions/setup-node@v3.0.0
         with:
           node-version: 16
-          cache: "yarn"
+          cache: "pnpm"
 
       - name: Install
-        run: yarn
+        run: pnpm install
 
       - name: Build
-        run: yarn build
+        run: pnpm build
 
       - name: Publish
         uses: chromaui/action@v1

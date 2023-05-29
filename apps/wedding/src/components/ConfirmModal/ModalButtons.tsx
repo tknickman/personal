@@ -59,9 +59,8 @@ const ModalButtons = ({
         className={clsx(
           'inline-flex w-full justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:col-start-2 sm:text-sm',
           {
-            'cursor-not-allowed opacity-75': submitState === 'loading',
-            'hover:opacity-75': submitState !== 'loading',
-            'opacity-75 cursor-not-allowed': closed,
+            'cursor-not-allowed opacity-75': submitState === 'loading' || closed,
+            'hover:opacity-75': submitState !== 'loading'
           }
         )}
         onClick={onConfirm}

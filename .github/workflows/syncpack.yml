@@ -10,11 +10,14 @@ jobs:
     name: syncpack
     steps:
       - uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       - uses: JamieMason/syncpack-github-action@0.2.2
         with:
-          package-manager: 'yarn'
+          package-manager: 'pnpm'
+          package-manager-version: '7.30.3'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

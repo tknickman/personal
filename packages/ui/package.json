@@ -2,6 +2,9 @@
   "name": "@tek/ui",
   "version": "1.0.0",
   "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
@@ -14,24 +17,25 @@
     "react-toggle-dark-mode": "^1.0.4"
   },
   "devDependencies": {
-    "@tek/eslint-config": "*",
-    "@tek/jest-config": "*",
-    "@tek/ts-config": "*",
+    "@jest/types": "^29.5.0",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "ts-node": "^10.5.0",
+    "@types/testing-library__jest-dom": "^5.14.6",
+    "ts-node": "^10.9.1",
     "tsup": "^5.11.13",
-    "typescript": "^4.7.4"
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0"
   },
   "files": [
     "dist/**"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
-  "sideEffects": false,
-  "types": "./dist/index.d.ts"
+  "sideEffects": false
 }

@@ -113,9 +113,12 @@ const RSVPForm = () => {
           <Image
             alt="Beach Mountain Maine"
             src={Engage}
-            objectPosition="60% bottom"
-            objectFit="cover"
-            layout="fill"
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: '60% bottom',
+            }}
           />
         </div>
       </div>

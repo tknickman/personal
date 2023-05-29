@@ -5,8 +5,9 @@ import RSVPs from '@/contexts/RSVP'
 import SectionContext from '@/contexts/Location'
 import Home from '../src/pages/index'
 
-describe('Home', () => {
+describe('home', () => {
   it('renders page heading', () => {
+    expect.assertions(2)
     render(
       <RouterContext.Provider value={createMockRouter({ query: {} })}>
         <SectionContext>

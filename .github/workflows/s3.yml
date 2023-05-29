@@ -19,18 +19,21 @@ jobs:
       NEXT_PUBLIC_FATHOM_TRACKING_URL: ${{ secrets.SHARE_NEXT_PUBLIC_FATHOM_TRACKING_URL }}
     steps:
       - uses: actions/checkout@v2
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
       
       - name: Setup node
         uses: actions/setup-node@v3.0.0
         with:
           node-version: 16
-          cache: "yarn"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
 
       - name: Build
-        run: yarn export
+        run: pnpm export
 
       - name: Deploy
         uses: reggionick/s3-deploy@v3

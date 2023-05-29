@@ -8,7 +8,7 @@ import Head from "next/head";
 import { useFathom, getDomains } from "@tek/utils";
 
 // configs
-import { theme } from "../tailwind.config";
+import tailwind from "../tailwind.config";
 import SEO from "../next-seo.config";
 
 // other
@@ -29,8 +29,8 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
       onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
       onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
       toggleConfig={{
-        sunColor: theme.extend.colors.secondary,
-        moonColor: theme.extend.colors.primary["600"],
+        sunColor: tailwind.theme.extend.colors.secondary,
+        moonColor: tailwind.theme.extend.colors.primary["600"],
       }}
     >
       <Head>
@@ -55,11 +55,11 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
         <link
           rel="mask-icon"
           href="/safari-pinned-tab.svg"
-          color={theme.extend.colors.primary["600"]}
+          color={tailwind.theme.extend.colors.primary["600"]}
         />
         <meta
           name="msapplication-TileColor"
-          content={theme.extend.colors.primary["600"]}
+          content={tailwind.theme.extend.colors.primary["600"]}
         />
       </Head>
       <NextSeo {...SEO} />
@@ -72,8 +72,8 @@ const ShareApp = ({ Component, pageProps }: AppProps) => {
       >
         <div className="absolute top-0 right-0 p-5">
           <DarkModeToggle
-            sunColor={theme.extend.colors.primary["600"]}
-            moonColor={theme.extend.colors.secondary}
+            sunColor={tailwind.theme.extend.colors.primary["600"]}
+            moonColor={tailwind.theme.extend.colors.secondary}
           />
         </div>
         <Component {...pageProps} />

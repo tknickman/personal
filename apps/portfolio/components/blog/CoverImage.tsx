@@ -31,8 +31,8 @@ const CoverImage = ({
   return (
     <motion.div className="sm:mx-0" whileHover={{ scale: 1.05, rotate: 1 }}>
       {slug ? (
-        <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]">
-          <a aria-label={title}>{image}</a>
+        <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]" aria-label={title}>
+          {image}
         </Link>
       ) : (
         image

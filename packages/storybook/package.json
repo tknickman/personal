@@ -20,6 +20,6 @@
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.1",
     "storybook-dark-mode": "^1.0.9",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.3.2"
   }
 }

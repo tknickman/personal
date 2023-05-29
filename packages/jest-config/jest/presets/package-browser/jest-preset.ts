@@ -10,7 +10,7 @@ const nodeConfig: Config.InitialOptions = {
   collectCoverage: true,
   setupFilesAfterEnv: ["@tek/jest-config/dist/configs/jest.setup.js"],
   coverageDirectory: "<rootDir>/coverage/",
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: 'jsdom',
   collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   modulePathIgnorePatterns: [

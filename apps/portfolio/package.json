@@ -20,9 +20,9 @@
     "@nivo/line": "^0.79.1",
     "@nivo/pie": "^0.79.1",
     "@tailwindcss/typography": "^0.5.4",
-    "@tek/icons": "*",
-    "@tek/ui": "*",
-    "@tek/utils": "*",
+    "@tek/icons": "workspace:*",
+    "@tek/ui": "workspace:*",
+    "@tek/utils": "workspace:*",
     "@types/tailwindcss": "^3.0.2",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.0",
@@ -38,21 +38,21 @@
     "remark-html": "^15.0.1",
     "scroll-snap": "^4.0.2",
     "smoothscroll-polyfill": "^0.4.4",
-    "typescript": "^4.7.4"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@tek/eslint-config": "*",
-    "@tek/jest-config": "*",
-    "@tek/ts-config": "*",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
     "@testing-library/react": "^14.0.0",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/smoothscroll-polyfill": "^0.3.1",
     "autoprefixer": "^10.4.7",
     "chromatic": "^6.5.1",
-    "postcss": "^8.4.6",
-    "tailwindcss": "^3.1.4"
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }
