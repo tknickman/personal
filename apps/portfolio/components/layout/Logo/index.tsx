@@ -10,7 +10,7 @@ type LogoProps = {
 
 const Logo = ({ className, animate = true }: LogoProps) => (
   <div className={clsx("text-light dark:text-dark flex", className)}>
-    <Link href="/" passHref>
+    <Link href="/" passHref legacyBehavior>
       <motion.a
         whileHover={
           animate

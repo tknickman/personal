@@ -12,7 +12,7 @@ const TagLanding = ({ tags }: { tags: Array<Tag> }) => {
         className="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4"
       >
         {tags.map((tag) => (
-          <Link href={tag.href} key={tag.slug} passHref>
+          <Link href={tag.href} key={tag.slug} passHref legacyBehavior>
             <li className="col-span-1 flex rounded-md shadow-sm">
               <div
                 className={clsx(

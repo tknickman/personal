@@ -1,6 +1,6 @@
 import { Next, Probot, TestingLibrary, Storybook } from "@tek/icons";
 
-import tailwindConfig from "../../../tailwind.config";
+import tailwind from "../../../tailwind.config";
 import { OpenSourceType } from "./types";
 
 const PR_FILTER = `is:pr author:tknickman is:closed`;
@@ -13,7 +13,7 @@ const EMOJI_KEY = {
 const OpenSourceData: Array<OpenSourceType> = [
   {
     Icon: Next,
-    color: tailwindConfig.theme.extend.colors.nextjs,
+    color: tailwind.theme.extend.colors.nextjs,
     background: "bg-nextjs",
     key: "next",
     repo: "next.js",
@@ -24,7 +24,7 @@ const OpenSourceData: Array<OpenSourceType> = [
   },
   {
     Icon: Next,
-    color: tailwindConfig.theme.extend.colors.turborepo,
+    color: tailwind.theme.extend.colors.turborepo,
     background: "bg-turborepo",
     key: "turborepo",
     repo: "turborepo",
@@ -35,7 +35,7 @@ const OpenSourceData: Array<OpenSourceType> = [
   },
   {
     Icon: Storybook,
-    color: tailwindConfig.theme.extend.colors.storybook,
+    color: tailwind.theme.extend.colors.storybook,
     background: "bg-storybook",
     key: "storybook",
     repo: "storybook",
@@ -46,7 +46,7 @@ const OpenSourceData: Array<OpenSourceType> = [
   },
   {
     Icon: TestingLibrary,
-    color: tailwindConfig.theme.extend.colors.testinglibrary,
+    color: tailwind.theme.extend.colors.testinglibrary,
     background: "bg-testinglibrary",
     key: "testinglibrary",
     repo: "eslint-plugin-testing-library",
@@ -57,7 +57,7 @@ const OpenSourceData: Array<OpenSourceType> = [
   },
   {
     Icon: Probot,
-    color: tailwindConfig.theme.extend.colors.probot,
+    color: tailwind.theme.extend.colors.probot,
     background: "bg-probot",
     key: "probot",
     repo: "probot",

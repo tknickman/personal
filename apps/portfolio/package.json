@@ -52,7 +52,7 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "autoprefixer": "^10.4.7",
     "chromatic": "^6.5.1",
-    "postcss": "^8.4.6",
-    "tailwindcss": "^3.1.4"
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }

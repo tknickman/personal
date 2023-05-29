@@ -11,7 +11,7 @@ import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { useHostName, useFathom, getDomains } from "@tek/utils";
 
 // configs
-import { theme } from "../tailwind.config";
+import tailwind from "../tailwind.config";
 import SEO from "../next-seo.config";
 
 // other
@@ -34,8 +34,8 @@ const ParkedApp = ({ Component, pageProps }: AppProps) => {
         onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
         onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
         toggleConfig={{
-          sunColor: theme.extend.colors.secondary,
-          moonColor: theme.extend.colors.primary["500"],
+          sunColor: tailwind.theme.extend.colors.secondary,
+          moonColor: tailwind.theme.extend.colors.primary["500"],
         }}
       >
         <NextSeo {...SEO({ hostName })} />
@@ -61,11 +61,11 @@ const ParkedApp = ({ Component, pageProps }: AppProps) => {
           <link
             rel="mask-icon"
             href="/safari-pinned-tab.svg"
-            color={theme.extend.colors.primary["500"]}
+            color={tailwind.theme.extend.colors.primary["500"]}
           />
           <meta
             name="msapplication-TileColor"
-            content={theme.extend.colors.primary["500"]}
+            content={tailwind.theme.extend.colors.primary["500"]}
           />
         </Head>
         <div
