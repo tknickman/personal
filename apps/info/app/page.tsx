@@ -1,31 +1,29 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useSearchParams } from "next/navigation";
 import Header from "../components/Header";
-import config, { LinkItem } from "../config";
+import config from "../config";
 import Modal from "../components/Modal";
 
 import Item from "../components/Item";
+import { useHighlight } from "../contexts/HighlightContext";
 
 const { LINKS } = config;
 
-const Home = ({
-  hoverColor,
-  selectedItem,
-  setSelectedItem,
-}: {
-  hoverColor: string;
-  selectedItem: LinkItem | null;
-  setSelectedItem: (item: LinkItem | null) => void;
-}) => {
+const Home = () => {
+  const { item, setItem, borderColorClassName } = useHighlight();
   const [show, setShow] = useState<boolean>(false);
-  const { query } = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const item = LINKS.find((item) => item.key === query.spotlight);
+    const item = LINKS.find(
+      (item) => item.key === searchParams?.get("spotlight")
+    );
     if (item) {
-      setSelectedItem(item);
+      setItem(item);
     }
-  }, [setSelectedItem, query.spotlight]);
+  }, [setItem, searchParams]);
 
   return (
     <>
@@ -34,10 +32,10 @@ const Home = ({
         {LINKS.map((link) => (
           <Item
             key={link.key}
-            hoverColor={hoverColor}
+            hoverColor={borderColorClassName}
             linkItem={link}
-            selectedItem={selectedItem}
-            setSelectedItem={setSelectedItem}
+            selectedItem={item}
+            setSelectedItem={setItem}
             setShow={setShow}
           />
         ))}

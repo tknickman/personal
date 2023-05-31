@@ -6,10 +6,5 @@ export { default as useInterval } from "./hooks/useInterval";
 export { default as useSticky } from "./hooks/useSticky";
 export { default as useElementPosition } from "./hooks/useElementPosition";
 
-// test-utils
-export { default as createMockRouter } from "./test-utils/createMockRouter";
-
-// other
-export { default as getHostFromHostName } from "./other/getHostFromHostName";
-export { default as getDomains } from "./other/getDomains";
-export { default as getCapitalWord } from "./other/getCapitalWord";
+// components
+export { default as Fathom } from "./components/Fathom";

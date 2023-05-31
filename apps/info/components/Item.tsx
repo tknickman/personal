@@ -1,3 +1,5 @@
+"use client"
+
 import { trackGoal } from "fathom-client";
 import clsx from "clsx";
 

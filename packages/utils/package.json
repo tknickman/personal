@@ -2,9 +2,21 @@
   "name": "@tek/utils",
   "version": "1.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "./server": {
+      "import": "./dist/index.server.js",
+      "types": "./dist/index.server.d.ts"
+    },
+    "./client": {
+      "import": "./dist/index.client.js",
+      "types": "./dist/index.client.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf coverage",
