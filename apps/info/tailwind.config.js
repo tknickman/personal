@@ -1,6 +1,6 @@
-import colors from "tailwindcss/colors";
+const colors = require("tailwindcss/colors");
 
-const config = {
+module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -22,14 +22,11 @@ const config = {
         instagram: "#DD2A7B",
         linkedin: "#0E76A8",
         github: "#6e5494",
-        stackoverflow: "#F48024",
+        stackOverflow: "#F48024",
         teknologist: "#2C4252",
         email: "#FFC43D",
         resume: "#903427",
       },
     },
   },
-  plugins: [],
 };
-
-export default config;

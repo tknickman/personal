@@ -4,17 +4,22 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./server": {
-      "import": "./dist/index.server.js",
-      "types": "./dist/index.server.d.ts"
-    },
-    "./client": {
-      "import": "./dist/index.client.js",
-      "types": "./dist/index.client.d.ts"
-    },
-    "./*": {
-      "import": "./dist/*.js",
-      "types": "./dist/*.d.ts"
+    "./*": "./dist/index.*.js"
+  },
+  "publishConfig": {
+    "typesVersions": {
+      "*": {
+        "*": [
+          "./dist/index.*.d.ts"
+        ]
+      }
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/index.*"
+      ]
     }
   },
   "scripts": {
@@ -38,7 +43,7 @@
   "peerDependencies": {
     "fathom-client": "^3.5.0",
     "jest": "^29.5.0",
-    "next": "^13.4.4",
+    "next": "^13.4.5",
     "react": "^18.2.0"
   },
   "files": [

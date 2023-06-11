@@ -1,11 +1,9 @@
-"use client"
+"use client";
 
 import { ReactNode } from "react";
+import { ThemeProvider } from "next-themes";
 import clsx from "clsx";
-import { DarkModeToggle, ThemeContext } from "@tek/ui";
-import { trackGoal } from "fathom-client";
-import goals from "../lib/fathomGoals";
-import tailwind from "../tailwind.config";
+import { DarkModeToggle } from "@tek/ui";
 import HighlightRouting, { useHighlight } from "../contexts/HighlightContext";
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -19,7 +17,20 @@ export function Layout({ children }: { children: ReactNode }) {
       )}
     >
       <div className="absolute top-0 right-0 p-5">
-        <DarkModeToggle />
+        <DarkModeToggle
+          triggerClassName={clsx(
+            "shadow-xl hover:text-gray-600 text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-md dark:hover:text-gray-200"
+          )}
+          menuClassName="shadow-xl divide-y dark:divide-gray-900"
+          itemClassName={clsx(
+            "text-gray-500 dark:text-gray-400 dark:bg-gray-800",
+            // hover
+            "hover:text-gray-700 dark:hover:text-gray-200",
+            // disabled
+            "disabled:text-gray-400 dark:disabled:text-gray-600"
+          )}
+          activeClassName="text-primary dark:text-primary dark:disabled:text-primary disabled:text-primary disabled:opacity-50"
+        />
       </div>
       {children}
     </div>
@@ -28,14 +39,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
 export default function WithProviders({ children }: { children: ReactNode }) {
   return (
-    <ThemeContext
-      onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-      onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
-      toggleConfig={{
-        moonColor: tailwind.theme.extend.colors.primary,
-        sunColor: tailwind.theme.extend.colors.primary,
-      }}
-    >
+    <ThemeProvider attribute="class" disableTransitionOnChange>
       <HighlightRouting>
         <Layout>{children}</Layout>
       </HighlightRouting>
@@ -44,6 +48,6 @@ export default function WithProviders({ children }: { children: ReactNode }) {
           Mastodon
         </a>
       </div>
-    </ThemeContext>
+    </ThemeProvider>
   );
 }

@@ -13,7 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // suppressHydrationWarning for next-themes
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Fathom
           siteId={fathomSiteId as string}
@@ -27,3 +28,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+// SEO
+export { metadata } from './metadata'

@@ -31,7 +31,10 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "next": "^13.4.4",
+    "@heroicons/react": "^1.0.6",
+    "@headlessui/react": "^1.6.5",
+    "next": "^13.4.5",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0"
   },
   "files": [

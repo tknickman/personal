@@ -8,7 +8,7 @@
     "dev": "next dev --port=3001",
     "lint": "TIMING=1 next lint",
     "start": "next start",
-    "test": "jest"
+    "test": "echo \"No tests\""
   },
   "dependencies": {
     "@calcom/embed-react": "^1.1.1",
@@ -20,23 +20,18 @@
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.0",
     "fathom-client": "^3.5.0",
-    "next": "^13.4.4",
-    "next-seo": "^5.1.0",
+    "next": "^13.4.5",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^6.7.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@tek/eslint-config": "workspace:*",
-    "@tek/jest-config": "workspace:*",
     "@tek/ts-config": "workspace:*",
-    "@testing-library/react": "^14.0.0",
-    "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }
 }
