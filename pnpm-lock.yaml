@@ -284,8 +284,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/utils
       '@vercel/analytics':
-        specifier: ^0.1.11
-        version: 0.1.11(react@18.2.0)
+        specifier: ^1.0.1
+        version: 1.0.1
       clsx:
         specifier: ^1.2.0
         version: 1.2.1
@@ -295,9 +295,9 @@ importers:
       next:
         specifier: ^13.4.5
         version: 13.4.5(react-dom@18.2.0)(react@18.2.0)
-      next-seo:
-        specifier: ^5.1.0
-        version: 5.5.0(next@13.4.5)(react-dom@18.2.0)(react@18.2.0)
+      next-themes:
+        specifier: ^0.2.1
+        version: 0.2.1(next@13.4.5)(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -308,18 +308,9 @@ importers:
       '@tek/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@tek/jest-config':
-        specifier: workspace:*
-        version: link:../../packages/jest-config
       '@tek/ts-config':
         specifier: workspace:*
         version: link:../../packages/ts-config
-      '@testing-library/react':
-        specifier: ^14.0.0
-        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
-      '@types/jest':
-        specifier: ^29.5.1
-        version: 29.5.1
       '@types/react':
         specifier: ^18.0.28
         version: 18.0.28
@@ -331,10 +322,7 @@ importers:
         version: 8.4.24
       tailwindcss:
         specifier: ^3.3.2
-        version: 3.3.2(ts-node@10.9.1)
-      ts-node:
-        specifier: ^10.9.1
-        version: 10.9.1(@types/node@18.14.0)(typescript@5.0.4)
+        version: 3.3.2
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
@@ -701,6 +689,43 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
 
+  packages/test-utils:
+    dependencies:
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0
+      next:
+        specifier: ^13.4.5
+        version: 13.4.5(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@jest/types':
+        specifier: ^29.5.0
+        version: 29.5.0
+      '@tek/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@tek/jest-config':
+        specifier: workspace:*
+        version: link:../jest-config
+      '@tek/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/jest':
+        specifier: ^29.5.1
+        version: 29.5.1
+      '@types/react':
+        specifier: ^18.0.28
+        version: 18.0.28
+      typescript:
+        specifier: ^5.0.4
+        version: 5.0.4
+
   packages/ts-config: {}
 
   packages/ui:
@@ -769,12 +794,9 @@ importers:
       fathom-client:
         specifier: ^3.5.0
         version: 3.5.0
-      jest:
-        specifier: ^29.5.0
-        version: 29.5.0
       next:
         specifier: ^13.4.5
-        version: 13.4.5(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)
+        version: 13.4.5(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -7127,6 +7149,10 @@ packages:
       react: ^16.8||^17||^18
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: false
 
   /@webassemblyjs/ast@1.11.1:

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getHostFromHostName from "../other/getHostFromHostName";
+import getHostFromHostName from "../../server/getHostFromHostName";
 
 const useHostName = (): string | null => {
   const [hostName, setHostName] = useState<string | null>(null);

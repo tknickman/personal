@@ -1,3 +1,5 @@
+// use client directive added via esbuild banner at build time 
+
 // hooks
 export { default as useFathom } from "./hooks/useFathom";
 export { default as useHostName } from "./hooks/useHostName";

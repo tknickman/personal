@@ -1,3 +1,5 @@
+"use client";
+
 import { trackGoal } from "fathom-client";
 import goals from "../lib/fathomGoals";
 import { Anchor } from "@tek/ui";

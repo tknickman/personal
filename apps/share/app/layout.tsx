@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <WithProviders>{children}</WithProviders>
-
+        
         {/* analytics */}
         <FathomAnalytics
           siteId={fathomSiteId as string}

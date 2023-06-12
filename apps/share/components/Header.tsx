@@ -1,4 +1,4 @@
-import { useHostName } from "@tek/utils";
+import { useHostName } from "@tek/utils/client";
 
 export default function Header() {
   const hostName = useHostName();

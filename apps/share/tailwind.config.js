@@ -1,7 +1,8 @@
-import colors from "tailwindcss/colors";
+const colors = require('tailwindcss/colors')
 
-export const config = {
+module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./hooks/**/*.{js,ts,jsx,tsx}",
@@ -23,5 +24,3 @@ export const config = {
   },
   plugins: [],
 };
-
-export default config

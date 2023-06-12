@@ -1,6 +1,7 @@
+"use client";
+
 import { useState, FormEvent, MouseEvent, useEffect } from "react";
-import { useRouter } from "next/router";
-import Head from "next/head";
+import { useSearchParams } from "next/navigation";
 import clsx from "clsx";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import { PhotographIcon } from "@heroicons/react/outline";
@@ -15,10 +16,10 @@ const redirect = (key: string): void => {
 };
 
 const Home = () => {
-  const router = useRouter();
+  const params = useSearchParams();
   const [key, setKey] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
-  const { asset } = router.query;
+  const asset = params.get("asset");
 
   useEffect(() => {
     if (asset) {
@@ -41,9 +42,6 @@ const Home = () => {
 
   return (
     <div>
-      <Head>
-        <title>TEK - Public Asset Directory</title>
-      </Head>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-500">

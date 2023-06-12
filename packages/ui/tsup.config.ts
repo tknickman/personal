@@ -1,8 +1,8 @@
 import { defineConfig, Options } from "tsup";
 
 export default defineConfig((options: Options) => ({
-  entry: ["src/index.tsx"],
-  format: ["cjs", "esm"],
+  entry: ["src/**/*.ts?(x)"],
+  format: ["esm"],
   external: [
     "react",
     "next",
@@ -11,6 +11,7 @@ export default defineConfig((options: Options) => ({
     "@heroicons/react",
     "@headlessui/react",
   ],
+  clean: true,
   inject: ["react-shim.ts"],
   banner: {
     js: `"use client";`

@@ -1,0 +1,27 @@
+{
+  "name": "@tek/test-utils",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "TIMING=1 eslint src --fix",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@jest/types": "^29.5.0",
+    "@tek/eslint-config": "workspace:*",
+    "@tek/jest-config": "workspace:*",
+    "@tek/ts-config": "workspace:*",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.0.28",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "jest": "^29.5.0",
+    "next": "^13.4.5",
+    "react": "^18.2.0"
+  },
+  "sideEffects": false
+}

@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { SunIcon, MoonIcon, DesktopComputerIcon } from "@heroicons/react/solid";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
 
@@ -24,6 +24,14 @@ export default function DarkModeToggle({
   activeClassName = "",
 }: DarkModeToggleProps) {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  // prevents ssr flash for mismatched dark mode
+  if (!mounted) {
+    return null;
+  }
 
   const active = THEMES.find((item) => item.name.toLowerCase() === theme);
   if (active === undefined) return null;
