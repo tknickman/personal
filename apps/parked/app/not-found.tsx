@@ -1,4 +1,4 @@
-const FourOhFour = () => {
+export default function NotFound() {
   return (
     <div className="flex h-screen">
       <div className="m-auto">
@@ -10,6 +10,4 @@ const FourOhFour = () => {
       </div>
     </div>
   );
-};
-
-export default FourOhFour;
+}

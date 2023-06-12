@@ -1,14 +1,13 @@
-import colors from "tailwindcss/colors";
+const colors = require("tailwindcss/colors");
 
-export const config = {
+module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./hooks/**/*.{js,ts,jsx,tsx}",
     "./config.{js,ts}",
-    "./node_modules/@tek/ui/dist/**/*.{js,mjs,ts,jsx,tsx}",
-    "./node_modules/@tek/utils/dist/**/*.{js,mjs,ts,jsx,tsx}",
-    "./node_modules/@tek/icons/dist/**/*.{js,mjs,ts,jsx,tsx}",
+    "./node_modules/@tek/*/dist/**/*.{js,mjs,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -23,5 +22,3 @@ export const config = {
   },
   plugins: [],
 };
-
-export default config;
