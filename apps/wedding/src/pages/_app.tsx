@@ -6,7 +6,8 @@ import RSVPs from '@/contexts/RSVP'
 import SectionContext from '@/contexts/Location'
 
 // internal
-import { getDomains, useFathom } from '@tek/utils'
+import { useFathom } from '@tek/utils/client'
+import { getDomains } from '@tek/utils/server'
 
 const hostnames = process.env.NEXT_PUBLIC_FATHOM_TRACKING_DOMAINS
 const fathomSiteId = process.env.NEXT_PUBLIC_FATHOM_TRACKING_ID
