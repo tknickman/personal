@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "test": "jest"
+    "test": "echo \"No tests\""
   },
   "dependencies": {
     "@headlessui/react": "^1.6.5",

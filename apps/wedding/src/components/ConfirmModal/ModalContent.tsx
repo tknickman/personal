@@ -3,7 +3,7 @@ import Carrot from '@components/icons/Carrot'
 import Chicken from '@components/icons/Chicken'
 import { RSVP, DinnerChoice } from '@types'
 import { RSVPContext } from '@contexts/RSVP'
-import { getCapitalWord } from '@tek/utils'
+import { getCapitalWord } from '@tek/utils/server'
 
 const FoodChoice = ({
   choice,

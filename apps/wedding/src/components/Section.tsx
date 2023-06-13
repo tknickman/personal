@@ -1,4 +1,4 @@
-import { useElementPosition } from '@tek/utils'
+import { useElementPosition } from '@tek/utils/client'
 import { useSection } from '@contexts/Location'
 import { useRouter } from 'next/router'
 import { useEffect, ReactNode } from 'react'

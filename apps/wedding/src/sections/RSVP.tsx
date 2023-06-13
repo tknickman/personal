@@ -20,7 +20,7 @@ import {
 } from '@contexts/RSVP'
 import FoodDetail from '@components/FoodDetail'
 import EmailDetail from '@components/EmailDetail'
-import { getCapitalWord } from '@tek/utils'
+import { getCapitalWord } from '@tek/utils/server'
 
 export function FoodSelection({
   viewDetails,
