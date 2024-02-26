@@ -30,16 +30,6 @@ type config = {
 const config = {
   LINKS: [
     {
-      name: "Portfolio",
-      key: "portfolio",
-      borderColor: "border-portfolio",
-      textColor: "text-portfolio",
-      ringColor: "focus-within:ring-portfolio",
-      username: "thomasknickman.com",
-      url: `http://www.thomasknickman.com?ref=${REF}`,
-      Icon: Portfolio,
-    },
-    {
       name: "LinkedIn",
       key: "linkedin",
       borderColor: "border-linkedin",
@@ -50,16 +40,6 @@ const config = {
       Icon: LinkedIn,
     },
     {
-      name: "Instagram",
-      key: "instagram",
-      borderColor: "border-instagram",
-      textColor: "text-instagram",
-      ringColor: "focus-within:ring-instagram",
-      username: "@tknickman",
-      url: "https://www.instagram.com/tknickman/",
-      Icon: Instagram,
-    },
-    {
       name: "Github",
       key: "github",
       borderColor: "border-github",
@@ -68,6 +48,16 @@ const config = {
       username: "@tknickman",
       url: "https://github.com/tknickman/",
       Icon: GitHub,
+    },
+    {
+      name: "Instagram",
+      key: "instagram",
+      borderColor: "border-instagram",
+      textColor: "text-instagram",
+      ringColor: "focus-within:ring-instagram",
+      username: "@tknickman",
+      url: "https://www.instagram.com/tknickman/",
+      Icon: Instagram,
     },
     {
       name: "Freelance",
