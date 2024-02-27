@@ -1,5 +1,5 @@
 import {
-  Portfolio,
+  X,
   Email,
   GitHub,
   Instagram,
@@ -58,6 +58,16 @@ const config = {
       username: "@tknickman",
       url: "https://www.instagram.com/tknickman/",
       Icon: Instagram,
+    },
+    {
+      name: "X",
+      key: "x",
+      borderColor: "border-twitter-x dark:border-white",
+      textColor: "text-twitter-x dark:text-white",
+      ringColor: "focus-within:ring-twitter-x",
+      username: "@tknickman",
+      url: "https://www.x.com/tknickman/",
+      Icon: X,
     },
     {
       name: "Freelance",

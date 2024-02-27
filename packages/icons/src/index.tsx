@@ -29,6 +29,7 @@ import Slack from "./Slack";
 import SQL from "./SQL";
 import Typescript from "./Typescript";
 import Vercel from "./Vercel";
+import X from "./X";
 
 export const All_ICONS = [
   AWS,
@@ -60,6 +61,7 @@ export const All_ICONS = [
   Typescript,
   UnderArmour,
   Vercel,
+  X,
 ];
 
 export type { IconProps };
@@ -94,4 +96,5 @@ export {
   Typescript,
   UnderArmour,
   Vercel,
+  X,
 };
