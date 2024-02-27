@@ -1,5 +1,5 @@
 import {
-  Portfolio,
+  X,
   Email,
   GitHub,
   Instagram,
@@ -30,16 +30,6 @@ type config = {
 const config = {
   LINKS: [
     {
-      name: "Portfolio",
-      key: "portfolio",
-      borderColor: "border-portfolio",
-      textColor: "text-portfolio",
-      ringColor: "focus-within:ring-portfolio",
-      username: "thomasknickman.com",
-      url: `http://www.thomasknickman.com?ref=${REF}`,
-      Icon: Portfolio,
-    },
-    {
       name: "LinkedIn",
       key: "linkedin",
       borderColor: "border-linkedin",
@@ -48,6 +38,16 @@ const config = {
       username: "@tknickman",
       url: "https://www.linkedin.com/in/tknickman/",
       Icon: LinkedIn,
+    },
+    {
+      name: "Github",
+      key: "github",
+      borderColor: "border-github",
+      textColor: "text-github",
+      ringColor: "focus-within:ring-github",
+      username: "@tknickman",
+      url: "https://github.com/tknickman/",
+      Icon: GitHub,
     },
     {
       name: "Instagram",
@@ -60,14 +60,14 @@ const config = {
       Icon: Instagram,
     },
     {
-      name: "Github",
-      key: "github",
-      borderColor: "border-github",
-      textColor: "text-github",
-      ringColor: "focus-within:ring-github",
+      name: "X",
+      key: "x",
+      borderColor: "border-twitter-x dark:border-white",
+      textColor: "text-twitter-x dark:text-white",
+      ringColor: "focus-within:ring-twitter-x",
       username: "@tknickman",
-      url: "https://github.com/tknickman/",
-      Icon: GitHub,
+      url: "https://www.x.com/tknickman/",
+      Icon: X,
     },
     {
       name: "Freelance",

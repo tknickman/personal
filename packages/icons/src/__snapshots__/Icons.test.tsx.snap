@@ -1103,3 +1103,22 @@ exports[`<Icon /> Vercel - renders 1`] = `
   </title>
 </svg>
 `;
+
+exports[`<Icon /> X - renders 1`] = `
+<svg
+  class="fill-current"
+  height="40px"
+  version="1.1"
+  viewBox="0 0 40 40"
+  width="40px"
+  x="0px"
+  y="0px"
+>
+  <path
+    d="M23.0218 18.0993L31.8103 8H29.5956L21.9688 16.7649L15.0474 8H7L17.75 21.6136L8.71315 32H10.9278L18.8044 22.9486L25.9526 32H34L23.0218 18.0993ZM10.4364 9.65403H14.2232L30.5636 30.346H26.7768L10.4364 9.65403Z"
+  />
+  <title>
+    X
+  </title>
+</svg>
+`;

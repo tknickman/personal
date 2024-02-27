@@ -5,13 +5,11 @@ import { useState } from "react";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
-import { trackGoal } from "fathom-client";
 
 // internal
 import { DarkModeToggle, ThemeContext } from "@tek/ui";
 import { getDomains, useFathom } from "@tek/utils";
 
-import goals from "../lib/fathomGoals";
 import tailwind from "../tailwind.config";
 import SEO from "../next-seo.config";
 import { LinkItem } from "../config";
@@ -31,8 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeContext
-        onSetDarkMode={() => trackGoal(goals.setDarkMode, 0)}
-        onSetLightMode={() => trackGoal(goals.setLightMode, 0)}
         toggleConfig={{
           moonColor: tailwind.theme.extend.colors.primary,
           sunColor: tailwind.theme.extend.colors.primary,

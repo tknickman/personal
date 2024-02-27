@@ -1,8 +1,7 @@
-import { trackGoal } from "fathom-client";
+import { trackEvent } from "fathom-client";
 import clsx from "clsx";
 
 import { LinkItem } from "../config";
-import goals from "../lib/fathomGoals";
 import Anchor from "./Anchor";
 import Button from "./Button";
 
@@ -29,7 +28,7 @@ const Item = ({
     <Element
       href={linkItem.url}
       onClick={() => {
-        trackGoal(goals[`${linkItem.key}Click` as keyof typeof goals], 0);
+        trackEvent(`${linkItem.key}`)
         if (linkItem.key === "portfolio") {
           setShow(true);
         }
